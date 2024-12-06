@@ -26,6 +26,12 @@ jobs:
         run: |
           cp rocker/Makefile  ./Makefile
           cp -r rocker/scripts/*  ./scripts
+          cp -r rocker/.github/workflows/* ./.github/workflows
+          cp  rocker/build/README.md ./build
+          cp  rocker/build/knit-report.R ./build
+          cp -r rocker/build/scripts/* ./build/scripts
+          cp -r rocker/build/templates/* ./build/templates
+          cp -r rocker/tests/* ./tests
       
       - name: Set as safe for following git commands
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
