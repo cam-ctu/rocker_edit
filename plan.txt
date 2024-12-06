@@ -1,0 +1,25 @@
+use the dockerfiles.yaml to make a pull reqest that can check for changes
+a)  checkout the main rocker repo
+b) copy across -
+	a) workflows
+	b) scripts
+	c) build/readme
+	 /knitreport
+	 /scripts
+	 /templates//
+	d) test
+	3) otehr top matter Makefile  .  not the readme though.
+
+make dir
+	build/args
+	/matrix
+	/reports
+	/variables
+	bakefiles
+	dockerfiles
+
+run rscript that makes the ammendments needed.
+	
+	
+set up Docker account for cam-ctu
+use kdiff3  with a merge on the old repo to work out what needs to be edited and how
