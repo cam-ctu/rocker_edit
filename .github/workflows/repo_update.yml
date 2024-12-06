@@ -25,7 +25,7 @@ jobs:
       - name: copy files across
         run: |
           cp rocker/Makefile  ./Makefile
-          cp rocker/scripts/*  ./scripts
+          cp -r rocker/scripts/*  ./scripts
       
       - name: Set as safe for following git commands
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
