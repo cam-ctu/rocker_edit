@@ -52,7 +52,7 @@ jobs:
           commit-message: Automatic update of repo copy and edit
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           signoff: false
-          branch: auto-detect
+          branch: auto-detected-updates
           delete-branch: true
           title: 'Automatic update'
           body: |
