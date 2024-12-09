@@ -9,8 +9,7 @@
             "tidyverse",
             "shiny",
             "shiny-verse",
-            "verse",
-            "geospatial"
+            "verse"
           ]
         }
       ]
