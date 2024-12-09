@@ -72,6 +72,17 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
   )
   bake_json_content$target$verse$tags <- c("docker.io/rocker/verse", "ghcr.io/rocker-org/verse") |>
     generate_versioned_tags()
+  
+  ## cctu
+  
+  bake_json_content$target$cctu$labels <- c(
+    bake_json_content$target$cctu$labels,
+    default_labels
+  )
+  bake_json_content$target$cctu$tags <- c("docker.io/shug0131/cctu", "ghcr.io/shug0131/cctu") |>
+    generate_versioned_tags()
+  
+  
 
   ## geospatial
   bake_json_content$target$geospatial$labels <- c(
@@ -105,6 +116,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$geospatial$`cache-from` <-
     bake_json_content$target$shiny$`cache-from` <-
     bake_json_content$target$`shiny-verse`$`cache-from` <-
+    bake_json_content$target$`cctu`$`cache-from` <-
     c(
       bake_json_content$target$`r-ver`$tags,
       bake_json_content$target$rstudio$tags,
@@ -112,7 +124,8 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
       bake_json_content$target$verse$tags,
       bake_json_content$target$geospatial$tags,
       bake_json_content$target$shiny$tags,
-      bake_json_content$target$`shiny-verse`$tags
+      bake_json_content$target$`shiny-verse`$tags,
+      bake_json_content$target$cctu$tags
     )
 
   jsonlite::write_json(

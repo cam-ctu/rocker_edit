@@ -54,17 +54,18 @@ df_args <- fs::dir_ls(path = "build/args", glob = "*.json") |>
 
 tibble::tibble(
   .name = c(
-    "r-ver",
-    "rstudio",
-    "tidyverse",
-    "verse",
-    "geospatial",
-    "shiny",
-    "shiny-verse",
-    "cuda",
-    "ml",
-    "ml-verse",
-    "binder"
+    # "r-ver",
+    # "rstudio",
+    # "tidyverse",
+    # "verse",
+    # "geospatial",
+    # "shiny",
+    # "shiny-verse",
+    # "cuda",
+    # "ml",
+    # "ml-verse",
+    # "binder"
+    "cctu"
   )
 ) |>
   dplyr::mutate(
@@ -85,17 +86,17 @@ tibble::tibble(
   )
 
 
-tibble::tibble(
-  r_version = readr::read_tsv("build/variables/r-versions.tsv", show_col_types = FALSE)$r_version |>
-    dplyr::last(),
-  proj_version = readr::read_tsv("build/variables/proj-versions.tsv", show_col_types = FALSE)$proj_version |>
-    dplyr::last(),
-  gdal_version = readr::read_tsv("build/variables/gdal-versions.tsv", show_col_types = FALSE)$gdal_version |>
-    dplyr::last(),
-  geos_version = readr::read_tsv("build/variables/geos-versions.tsv", show_col_types = FALSE)$geos_version |>
-    dplyr::last()
-) |>
-  write_dockerfiles(
-    dockerfile_template = readr::read_file("build/templates/dockerfiles/geospatial-dev-osgeo.Dockerfile.txt"),
-    path_template = "dockerfiles/geospatial-dev-osgeo.Dockerfile"
-  )
+# tibble::tibble(
+#   r_version = readr::read_tsv("build/variables/r-versions.tsv", show_col_types = FALSE)$r_version |>
+#     dplyr::last(),
+#   proj_version = readr::read_tsv("build/variables/proj-versions.tsv", show_col_types = FALSE)$proj_version |>
+#     dplyr::last(),
+#   gdal_version = readr::read_tsv("build/variables/gdal-versions.tsv", show_col_types = FALSE)$gdal_version |>
+#     dplyr::last(),
+#   geos_version = readr::read_tsv("build/variables/geos-versions.tsv", show_col_types = FALSE)$geos_version |>
+#     dplyr::last()
+# ) |>
+#   write_dockerfiles(
+#     dockerfile_template = readr::read_file("build/templates/dockerfiles/geospatial-dev-osgeo.Dockerfile.txt"),
+#     path_template = "dockerfiles/geospatial-dev-osgeo.Dockerfile"
+#   )

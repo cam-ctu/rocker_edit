@@ -4,12 +4,7 @@
       "default": [
         {
           "targets": [
-            "r-ver",
-            "rstudio",
-            "tidyverse",
-            "shiny",
-            "shiny-verse",
-            "verse"
+            "cctu"
           ]
         }
       ]
@@ -54,6 +49,17 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/verse",
         "org.opencontainers.image.description": "Adds tex & related publishing packages to version-locked tidyverse image.",
+        "org.opencontainers.image.base.name": "docker.io/library/ubuntu:{{ubuntu_series}}",
+        "org.opencontainers.image.version": "R-{{r_version}}"
+      },
+      "platforms": ["linux/amd64"],
+      "cache-to": ["type=inline"]
+    },
+    "cctu": {
+      "dockerfile": "dockerfiles/cctu_{{r_version}}.Dockerfile",
+      "labels": {
+        "org.opencontainers.image.title": "shug0131/cctu",
+        "org.opencontainers.image.description": "Adds CCTU packages to version-locked verse image.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:{{ubuntu_series}}",
         "org.opencontainers.image.version": "R-{{r_version}}"
       },

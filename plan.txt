@@ -25,6 +25,9 @@ set up Docker account for cam-ctu
 use kdiff3  with a merge on the old repo to work out what needs to be edited and how
 
 
+Trim down the amount that is copied across.  maybe not all the scripts, templates (but might still want to see differences if changes are made in main repo)
+
+
 I had to 1) within organisation settings allow tokens 2) from my account (top right> settings> Developer Settings> TOkens) 
  create a token with the 3 permissions needed.
 3) copy the secret output to a secret within the repository 4)  add ` tokens: ${{ secrets.WORKFLOW}}` to 

@@ -4,12 +4,7 @@
       "default": [
         {
           "targets": [
-            "r-ver",
-            "rstudio",
-            "tidyverse",
-            "shiny",
-            "shiny-verse",
-            "verse"
+            "cctu"
           ]
         }
       ]
@@ -101,7 +96,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "rstudio": {
@@ -189,7 +192,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "tidyverse": {
@@ -276,7 +287,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "verse": {
@@ -363,7 +382,110 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
+      ]
+    },
+    "cctu": {
+      "dockerfile": "dockerfiles/cctu_4.4.2.Dockerfile",
+      "labels": {
+        "org.opencontainers.image.title": "shug0131/cctu",
+        "org.opencontainers.image.description": "Adds CCTU packages to version-locked verse image.",
+        "org.opencontainers.image.base.name": "docker.io/library/ubuntu:noble",
+        "org.opencontainers.image.version": "R-4.4.2",
+        "org.opencontainers.image.licenses": "GPL-2.0-or-later",
+        "org.opencontainers.image.source": "https://github.com/rocker-org/rocker-versioned2",
+        "org.opencontainers.image.vendor": "Rocker Project",
+        "org.opencontainers.image.authors": "Carl Boettiger <cboettig@ropensci.org>"
+      },
+      "platforms": [
+        "linux/amd64"
+      ],
+      "cache-to": [
+        "type=inline"
+      ],
+      "tags": [
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
+      ],
+      "cache-from": [
+        "docker.io/rocker/r-ver:4.4.2",
+        "ghcr.io/rocker-org/r-ver:4.4.2",
+        "docker.io/rocker/r-ver:4.4",
+        "ghcr.io/rocker-org/r-ver:4.4",
+        "docker.io/rocker/r-ver:4",
+        "ghcr.io/rocker-org/r-ver:4",
+        "docker.io/rocker/r-ver:latest",
+        "ghcr.io/rocker-org/r-ver:latest",
+        "docker.io/rocker/rstudio:4.4.2",
+        "ghcr.io/rocker-org/rstudio:4.4.2",
+        "docker.io/rocker/rstudio:4.4",
+        "ghcr.io/rocker-org/rstudio:4.4",
+        "docker.io/rocker/rstudio:4",
+        "ghcr.io/rocker-org/rstudio:4",
+        "docker.io/rocker/rstudio:latest",
+        "ghcr.io/rocker-org/rstudio:latest",
+        "docker.io/rocker/tidyverse:4.4.2",
+        "ghcr.io/rocker-org/tidyverse:4.4.2",
+        "docker.io/rocker/tidyverse:4.4",
+        "ghcr.io/rocker-org/tidyverse:4.4",
+        "docker.io/rocker/tidyverse:4",
+        "ghcr.io/rocker-org/tidyverse:4",
+        "docker.io/rocker/tidyverse:latest",
+        "ghcr.io/rocker-org/tidyverse:latest",
+        "docker.io/rocker/verse:4.4.2",
+        "ghcr.io/rocker-org/verse:4.4.2",
+        "docker.io/rocker/verse:4.4",
+        "ghcr.io/rocker-org/verse:4.4",
+        "docker.io/rocker/verse:4",
+        "ghcr.io/rocker-org/verse:4",
+        "docker.io/rocker/verse:latest",
+        "ghcr.io/rocker-org/verse:latest",
+        "docker.io/rocker/geospatial:4.4.2",
+        "ghcr.io/rocker-org/geospatial:4.4.2",
+        "docker.io/rocker/geospatial:4.4",
+        "ghcr.io/rocker-org/geospatial:4.4",
+        "docker.io/rocker/geospatial:4",
+        "ghcr.io/rocker-org/geospatial:4",
+        "docker.io/rocker/geospatial:latest",
+        "ghcr.io/rocker-org/geospatial:latest",
+        "docker.io/rocker/shiny:4.4.2",
+        "ghcr.io/rocker-org/shiny:4.4.2",
+        "docker.io/rocker/shiny:4.4",
+        "ghcr.io/rocker-org/shiny:4.4",
+        "docker.io/rocker/shiny:4",
+        "ghcr.io/rocker-org/shiny:4",
+        "docker.io/rocker/shiny:latest",
+        "ghcr.io/rocker-org/shiny:latest",
+        "docker.io/rocker/shiny-verse:4.4.2",
+        "ghcr.io/rocker-org/shiny-verse:4.4.2",
+        "docker.io/rocker/shiny-verse:4.4",
+        "ghcr.io/rocker-org/shiny-verse:4.4",
+        "docker.io/rocker/shiny-verse:4",
+        "ghcr.io/rocker-org/shiny-verse:4",
+        "docker.io/rocker/shiny-verse:latest",
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "geospatial": {
@@ -450,7 +572,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "shiny": {
@@ -537,7 +667,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     },
     "shiny-verse": {
@@ -624,7 +762,15 @@
         "docker.io/rocker/shiny-verse:4",
         "ghcr.io/rocker-org/shiny-verse:4",
         "docker.io/rocker/shiny-verse:latest",
-        "ghcr.io/rocker-org/shiny-verse:latest"
+        "ghcr.io/rocker-org/shiny-verse:latest",
+        "docker.io/shug0131/cctu:4.4.2",
+        "ghcr.io/shug0131/cctu:4.4.2",
+        "docker.io/shug0131/cctu:4.4",
+        "ghcr.io/shug0131/cctu:4.4",
+        "docker.io/shug0131/cctu:4",
+        "ghcr.io/shug0131/cctu:4",
+        "docker.io/shug0131/cctu:latest",
+        "ghcr.io/shug0131/cctu:latest"
       ]
     }
   }
