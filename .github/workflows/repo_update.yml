@@ -29,9 +29,9 @@ jobs:
           path: './rocker'
       - name: copy files across
         run: |
-          cp rocker/Makefile  ./Makefile
-          cp -r rocker/scripts/*  ./scripts
-          cp -r rocker/.github/workflows/* ./.github/workflows
+          cp -p rocker/Makefile  ./Makefile
+          cp -rp rocker/scripts/*  ./scripts
+          cp -rp rocker/.github/workflows/* ./.github/workflows
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
           cp  rocker/build/scripts/clean-files.R ./build/scripts/clean-files.R
@@ -44,7 +44,7 @@ jobs:
           cp rocker/build/templates/bakefiles/main.docker-bake.json ./build/templates/bakefiles/main.docker-bake-master.json
           cp rocker/build/templates/bakefiles/extra.docker-bake.json ./build/templates/bakefiles/extra.docker-bake.json
           cp rocker/build/templates/bakefiles/experimental.docker-bake.json ./build/templates/bakefiles/experimental.docker-bake.json
-          cp -r rocker/tests/* ./tests
+          cp -rp rocker/tests/* ./tests
       
       - name: Set as safe for following git commands
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
