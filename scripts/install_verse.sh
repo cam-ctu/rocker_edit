@@ -76,9 +76,10 @@ apt-get -y autoremove
 ## Add LaTeX, rticles and bookdown support
 ## tinytex recommends a dummy texlive if using tlmgr manually
 if [[ ! -x "/usr/bin/latex" ]]; then
-    wget "https://travis-bin.yihui.name/texlive-local.deb"
-    dpkg -i texlive-local.deb
-    rm texlive-local.deb
+##    wget "https://travis-bin.yihui.name/texlive-local.deb"
+##    dpkg -i texlive-local.deb
+##    rm texlive-local.deb
+    apt-get install texlive
 fi
 
 ## Install texlive
