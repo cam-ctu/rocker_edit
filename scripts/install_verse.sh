@@ -79,7 +79,7 @@ if [[ ! -x "/usr/bin/latex" ]]; then
 ##    wget "https://travis-bin.yihui.name/texlive-local.deb"
 ##    dpkg -i texlive-local.deb
 ##    rm texlive-local.deb
-    apt-get install texlive
+    apt_install texlive
 fi
 
 ## Install texlive
