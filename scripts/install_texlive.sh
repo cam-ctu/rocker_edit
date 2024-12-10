@@ -62,11 +62,6 @@ tlmgr install \
     bigintcalc \
     bitset \
     bookmark \
-    collection-latex \
-    collection-fontsrecommended \
-    collection-latexrecommended \
-    collection-fontsextra \
-    collection-latexextra \
     context \
     ec \
     epstopdf-pkg \
