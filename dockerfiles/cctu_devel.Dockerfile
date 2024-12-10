@@ -6,8 +6,8 @@ ENV R_VERSION="devel"
 ENV R_HOME="/usr/local/lib/R"
 ENV TZ="Etc/UTC"
 
-COPY scripts/install_R_source_with_tests.sh /rocker_scripts/install_R_source.sh
-RUN /rocker_scripts/install_R_source.sh
+COPY scripts/install_R_source_with_tests.sh /rocker_scripts/install_R_source_with_tests.sh
+RUN /rocker_scripts/install_R_source_with_tests.sh
 
 ENV CRAN="https://cloud.r-project.org"
 ENV LANG=en_US.UTF-8
