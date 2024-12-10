@@ -23,6 +23,7 @@ apt_install \
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
     kableExtra\
+    rstantools\
     rms
     
 # Need to modify this to lookup the CCTU_VERSIOM based on $R_VERSION
