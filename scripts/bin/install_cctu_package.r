@@ -26,6 +26,7 @@ message( "R_VERSION parameter = ", args)
   commit_date
 }
 
+message("pull cctu version history")
 
 df_cctu <- gert::git_remote_ls(remote = "https://github.com/cam-ctu/cctu.git")|>
   dplyr::filter(stringr::str_detect(ref, "^refs/tags/[vV]?")) |>
@@ -45,10 +46,13 @@ df_cctu <- gert::git_remote_ls(remote = "https://github.com/cam-ctu/cctu.git")|>
   ) |>
   dplyr::arrange(cctu_commit_date)
 
+message("compare to rversion history")
+
 df_args <- read.csv("build/args/history.tsv",sep="\t",
                     colClasses=c("character","Date","character","Date","character")
                     )
 
+message("do the matching")
 
 df_args <- df_args|>
   tidyr::expand_grid(df_cctu)|>
