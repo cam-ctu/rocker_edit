@@ -52,4 +52,7 @@ COPY scripts/install_verse_edit.sh /rocker_scripts/install_verse.sh
 COPY scripts/install_texlive_plus.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
+COPY scripts/install_cctu.sh /rocker_scripts/install_cctu.sh
+RUN /rocker_scripts/install_cctu.sh
+
 COPY scripts /rocker_scripts

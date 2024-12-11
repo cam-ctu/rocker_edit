@@ -70,7 +70,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$verse$labels,
     default_labels
   )
-  bake_json_content$target$verse$tags <- c("docker.io/rocker/verse", "ghcr.io/rocker-org/verse") |>
+  bake_json_content$target$verse$tags <- c("docker.io/shug0131/verse", "ghcr.io/shug0131/verse") |>
     generate_versioned_tags()
   
   ## cctu
