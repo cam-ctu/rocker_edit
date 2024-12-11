@@ -1,4 +1,4 @@
-#!/usr/bin/env r
+# #No commonet out #!/usr/bin/env r
 #
 # A second example to install one or more packages, now with option parsing
 #
@@ -9,10 +9,12 @@
 # Released under GPL (>= 2)
 
 ## load docopt package from CRAN
-library(docopt)
-opt <- docopt("Usage: install_cctu_package.r [R_VERSION]")
+#library(docopt)
+#opt <- docopt("Usage: install_cctu_package.r [R_VERSION]")
 
-opt$R_VERSION  
+args <-  commandArgs(TRUE)
+
+message( "R_VERSION parameter = ", args)
 
 
 .get_github_commit_date <- function(commit_url) {
@@ -56,7 +58,7 @@ df_args <- df_args|>
   dplyr::ungroup()
 
 cctu_version <- df_args |>
-  dplyr::filter(r_version==opt$R_VERSION) |>
+  dplyr::filter(r_version==args[1]) |>
   dplyr::pull(cctu_version)
 
 message("Installing cctu version ", cctu_version)
