@@ -70,7 +70,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$verse$labels,
     default_labels
   )
-  bake_json_content$target$verse$tags <- c("docker.io/shug0131/verse", "ghcr.io/shug0131/verse") |>
+  bake_json_content$target$verse$tags <- c("docker.io/shug0131/verse", "ghcr.io/cam-ctu/verse") |>
     generate_versioned_tags()
   
   ## cctu
@@ -79,7 +79,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$cctu$labels,
     default_labels
   )
-  bake_json_content$target$cctu$tags <- c("docker.io/shug0131/cctu", "ghcr.io/shug0131/cctu") |>
+  bake_json_content$target$cctu$tags <- c("docker.io/shug0131/cctu", "ghcr.io/cam-ctu/cctu") |>
     generate_versioned_tags()
   
   
