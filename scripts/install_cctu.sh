@@ -29,6 +29,8 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
 echo "second install"    
 # Need to modify this to lookup the CCTU_VERSIOM based on $R_VERSION
 
+
+ln -sf /rocker_scripts/bin/install_cctu_package.r /usr/local/bin/install_cctu_package.r
 install_cctu_package.r "$R_VERSION"
 
 echo "my script"    
