@@ -22,9 +22,9 @@ echo "first install"
 
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
-    kableExtra\
-    rstantools\
-    rms
+    kableExtra
+#    rstantools\
+#    rms
 
 echo "second install"    
 # Need to modify this to lookup the CCTU_VERSIOM based on $R_VERSION
