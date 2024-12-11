@@ -4,6 +4,7 @@
       "default": [
         {
           "targets": [
+            "verse",
             "cctu"
           ]
         }
@@ -41,8 +42,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -83,8 +84,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -124,8 +125,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -139,7 +140,7 @@
     "verse": {
       "dockerfile": "dockerfiles/verse_4.4.1.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/verse",
+        "org.opencontainers.image.title": "shug0131/verse",
         "org.opencontainers.image.description": "Adds tex & related publishing packages to version-locked tidyverse image.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:jammy",
         "org.opencontainers.image.version": "R-4.4.1",
@@ -155,8 +156,8 @@
         "type=inline"
       ],
       "tags": [
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1"
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1"
       ],
       "cache-from": [
         "docker.io/rocker/r-ver:4.4.1",
@@ -165,8 +166,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -206,8 +207,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -247,8 +248,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -288,8 +289,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
@@ -329,8 +330,8 @@
         "ghcr.io/rocker-org/rstudio:4.4.1",
         "docker.io/rocker/tidyverse:4.4.1",
         "ghcr.io/rocker-org/tidyverse:4.4.1",
-        "docker.io/rocker/verse:4.4.1",
-        "ghcr.io/rocker-org/verse:4.4.1",
+        "docker.io/shug0131/verse:4.4.1",
+        "ghcr.io/shug0131/verse:4.4.1",
         "docker.io/rocker/geospatial:4.4.1",
         "ghcr.io/rocker-org/geospatial:4.4.1",
         "docker.io/rocker/shiny:4.4.1",
