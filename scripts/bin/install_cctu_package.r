@@ -37,15 +37,17 @@ df_cctu <- gert::git_remote_ls(remote = "https://github.com/cam-ctu/cctu.git")|>
     .keep = "none"
   ) |>
   dplyr::slice_tail(n = 10) |>
-  dplyr::rowwise() |>
-  dplyr::mutate(cctu_commit_date = .get_github_commit_date(commit_url)) |>
-  dplyr::ungroup() |>
-  tidyr::drop_na() |>
-  dplyr::select(
-    cctu_version,
-    cctu_commit_date
-  ) |>
-  dplyr::arrange(cctu_commit_date)
+  dplyr::rowwise()
+
+
+  # dplyr::mutate(cctu_commit_date = .get_github_commit_date(commit_url)) |>
+  # dplyr::ungroup() |>
+  # tidyr::drop_na() |>
+  # dplyr::select(
+  #   cctu_version,
+  #   cctu_commit_date
+  # ) |>
+  # dplyr::arrange(cctu_commit_date)
 
 message("compare to rversion history")
 
