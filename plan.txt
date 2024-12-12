@@ -34,3 +34,23 @@ I had to 1) within organisation settings allow tokens 2) from my account (top ri
 the yml file..  Not well documented at alll!!
 
 
+
+---------
+
+redit to only build cctu,  running all the shell scripts directly. Delete bakups.
+tidy up file naming -master, edit, etc...
+add back in the extra packages for cctu  rmb...
+map the actions triggers to understand better. 
+remove building of extras. 
+force 4.4.1 to build
+give better README.me.  Maybe edit the reports and wikis. 
+
+make pull request to install_verse.sh  on the rocker repo
+
+Look at Validation to see scale of needs. Add extra packages?
+Try to get out the next 4.4.1 for live use before holidays.
+
+
+
+
+
