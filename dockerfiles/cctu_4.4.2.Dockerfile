@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM docker.io/shug0131/verse:4.4.2
+FROM ghcr.io/cam-ctu/verse:4.4.2
 
 #ENV R_VERSION="4.4.2"
 #ENV R_HOME="/usr/local/lib/R"
@@ -12,7 +12,9 @@ FROM docker.io/shug0131/verse:4.4.2
 #ENV CRAN="https://p3m.dev/cran/__linux__/noble/latest"
 #ENV LANG=en_US.UTF-8
 #
-#COPY scripts/bin/ /rocker_scripts/bin/
+
+COPY scripts/bin/ /rocker_scripts/bin/
+
 #COPY scripts/setup_R.sh /rocker_scripts/setup_R.sh
 #RUN <<EOF
 #if grep -q "1000" /etc/passwd; then

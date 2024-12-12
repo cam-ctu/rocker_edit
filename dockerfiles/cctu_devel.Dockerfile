@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM docker.io/shug0131/verse:devel
+FROM ghcr.io/cam-ctu/verse:devel
 
 #ENV R_VERSION="devel"
 #ENV R_HOME="/usr/local/lib/R"
@@ -12,7 +12,9 @@ FROM docker.io/shug0131/verse:devel
 #ENV CRAN="https://cloud.r-project.org"
 #ENV LANG=en_US.UTF-8
 #
-#COPY scripts/bin/ /rocker_scripts/bin/
+
+COPY scripts/bin/ /rocker_scripts/bin/
+
 #COPY scripts/setup_R.sh /rocker_scripts/setup_R.sh
 #RUN <<EOF
 #if grep -q "1000" /etc/passwd; then
