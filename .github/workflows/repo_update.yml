@@ -35,11 +35,11 @@ jobs:
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
           cp  rocker/build/scripts/clean-files.R ./build/scripts/clean-files.R
-          cp  rocker/build/scripts/generate-args.R ./build/scripts/generate-args.R
+          cp  rocker/build/scripts/generate-args.R ./build/scripts/generate-args-master.R
           cp  rocker/build/scripts/generate-bakefiles.R ./build/scripts/generate-bakefiles-master.R
           cp  rocker/build/scripts/generate-dockerfiles.R ./build/scripts/generate-dockerfiles-master.R
           cp  rocker/build/scripts/generate-matrix.R ./build/scripts/generate-matrix.R
-          cp  rocker/build/scripts/generate-variables.R ./build/scripts/generate-variables.R
+          cp  rocker/build/scripts/generate-variables.R ./build/scripts/generate-variables-master.R
           cp -r rocker/build/templates/dockerfiles/* ./build/templates/dockerfiles
           cp rocker/build/templates/bakefiles/main.docker-bake.json ./build/templates/bakefiles/main.docker-bake-master.json
           cp rocker/build/templates/bakefiles/extra.docker-bake.json ./build/templates/bakefiles/extra.docker-bake.json

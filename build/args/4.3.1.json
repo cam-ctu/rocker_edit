@@ -1,0 +1,13 @@
+{
+  "r_version": "4.3.1",
+  "r_release_date": "2023-06-16",
+  "r_freeze_date": "2023-10-30",
+  "ubuntu_series": "jammy",
+  "ubuntu_version": "22.04",
+  "cran": "https://p3m.dev/cran/__linux__/jammy/2023-10-30",
+  "rstudio_version": "2023.06.2+561",
+  "ctan": "https://www.texlive.info/tlnet-archive/2023/10/30/tlnet",
+  "r_major_latest": false,
+  "r_minor_latest": false,
+  "cctu_version": "v0.7.4"
+}

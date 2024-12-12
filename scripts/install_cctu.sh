@@ -33,11 +33,11 @@ echo "second install"
 #ln -sf /rocker_scripts/bin/install_cctu_package.r /usr/local/bin/install_cctu_package.r
 #echo "link set"
 
-Rscript rocker_scripts/bin/install_cctu_package.r "$R_VERSION"
+#Rscript rocker_scripts/bin/install_cctu_package.r "$R_VERSION"
 
 
 echo "my script"    
-#R -q -e "remotes::install_github(repo=\"cam-ctu/cctu\", ref=\"$CCTU_VERSION\", INSTALL_opts=\"--install-tests\" , build_vignettes=TRUE)"
+R -q -e "remotes::install_github(repo=\"cam-ctu/cctu\", ref=\"$CCTU_VERSION\", INSTALL_opts=\"--install-tests\" , build_vignettes=TRUE)"
 
 
 # The GSL package requires this, and MICE needs gsl. I think Ubuntu:latest doesn't have it

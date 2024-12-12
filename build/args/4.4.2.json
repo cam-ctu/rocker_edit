@@ -5,8 +5,9 @@
   "ubuntu_series": "noble",
   "ubuntu_version": "24.04",
   "cran": "https://p3m.dev/cran/__linux__/noble/latest",
-  "rstudio_version": "2024.09.1+394",
+  "rstudio_version": "2023.06.2+561",
   "ctan": "https://mirror.ctan.org/systems/texlive/tlnet",
   "r_major_latest": true,
-  "r_minor_latest": true
+  "r_minor_latest": true,
+  "cctu_version": "0.8.1"
 }

@@ -110,6 +110,28 @@ latest_version_of_git_repo <- function(remote_repo) {
 }
 
 
+cctu_versions <-function(..., .n = 10){
+  gert::git_remote_ls(remote = "https://github.com/cam-ctu/cctu.git")|>
+    dplyr::filter(stringr::str_detect(ref, "^refs/tags/[vV]?")) |>
+    dplyr::mutate(
+      cctu_version = stringr::str_extract(ref, r"([vV]?\d+\.\d+\.\d+.{0,1}\d*.*)"),
+      commit_url = glue::glue("https://api.github.com/repos/cam-ctu/cctu/commits/{oid}"),
+      .keep = "none"
+    ) |>
+    dplyr::slice_tail(n = .n) |>
+    dplyr::rowwise()|>
+    dplyr::mutate(cctu_commit_date = get_github_commit_date(commit_url)) |>
+    dplyr::ungroup() |>
+    tidyr::drop_na() |>
+    dplyr::select(
+      cctu_version,
+      cctu_commit_date
+    ) |>
+    dplyr::arrange(cctu_commit_date)
+}
+
+
+
 r_versions_with_freeze_dates() |>
   readr::write_tsv("build/variables/r-versions.tsv", na = "")
 
@@ -139,3 +161,8 @@ tibble::tibble(
   geos_version = latest_version_of_git_repo("https://github.com/libgeos/geos.git")
 ) |>
   readr::write_tsv("build/variables/geos-versions.tsv", na = "")
+
+
+cctu_versions() |>
+  readr::write_tsv("build/variables/cctu-versions.tsv", na = "")
+

@@ -147,6 +147,7 @@ rocker_versioned_args <- function(
     r_versions_file = "build/variables/r-versions.tsv",
     ubuntu_lts_versions_file = "build/variables/ubuntu-lts-versions.tsv",
     rstudio_versions_file = "build/variables/rstudio-versions.tsv",
+    cctu_versions_file="build/variables/cctu-versions.tsv",
     n_r_versions = 6) {
   df_all <- readr::read_tsv(r_versions_file, show_col_types = FALSE) |>
     dplyr::arrange(as.numeric_version(r_version)) |>
@@ -183,7 +184,16 @@ rocker_versioned_args <- function(
     ) |>
     dplyr::filter(
       r_freeze_date > rstudio_commit_date | is.na(r_freeze_date)
-    )
+    )|>
+    tidyr::expand_grid(
+      readr::read_tsv(
+        cctu_versions_file,
+        show_col_types = FALSE,
+        col_types = list(cctu_version = readr::col_character())
+      )
+    ) |>
+    dplyr::filter(r_freeze_date > cctu_commit_date | is.na(r_freeze_date)) |>
+    dplyr::slice_max(cctu_commit_date, with_ties = FALSE, by = r_version) 
 
   df_available_rstudio <- df_all |>
     dplyr::distinct(ubuntu_series, rstudio_version) |>
@@ -211,8 +221,13 @@ rocker_versioned_args <- function(
       rstudio_version,
       ctan,
       r_major_latest,
-      r_minor_latest
+      r_minor_latest,
+      cctu_version
     )
+  
+  
+  
+  
 }
 
 
@@ -253,8 +268,8 @@ df_history <- readr::read_tsv(
 
 df_args |>
   dplyr::filter(!r_version == "devel") |>
-  dplyr::select(names(df_history)) |>
-  dplyr::union(df_history) |>
+  #dplyr::select(names(df_history)) |>
+  dplyr::bind_rows(df_history) |>
   dplyr::distinct(r_version, .keep_all = TRUE) |>
   dplyr::arrange(r_version) |>
   readr::write_tsv("build/args/history.tsv", na = "")
