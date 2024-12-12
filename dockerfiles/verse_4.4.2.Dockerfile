@@ -6,7 +6,7 @@ ENV R_VERSION="4.4.2"
 ENV R_HOME="/usr/local/lib/R"
 ENV TZ="Etc/UTC"
 
-COPY scripts/install_R_source_with_tests.sh /rocker_scripts/install_R_source.sh
+COPY scripts/install_R_source.sh /rocker_scripts/install_R_source.sh
 RUN /rocker_scripts/install_R_source.sh
 
 ENV CRAN="https://p3m.dev/cran/__linux__/noble/latest"
@@ -48,8 +48,8 @@ RUN /rocker_scripts/install_quarto.sh
 ENV CTAN_REPO="https://mirror.ctan.org/systems/texlive/tlnet"
 ENV PATH="$PATH:/usr/local/texlive/bin/linux"
 
-COPY scripts/install_verse_edit.sh /rocker_scripts/install_verse.sh
-COPY scripts/install_texlive_plus.sh /rocker_scripts/install_texlive.sh
+COPY scripts/install_verse.sh /rocker_scripts/install_verse.sh
+COPY scripts/install_texlive.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
 COPY scripts /rocker_scripts
