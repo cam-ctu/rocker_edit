@@ -68,4 +68,4 @@ cctu_version <- df_args |>
 message("Installing cctu version ", cctu_version)
 
 
-remotes::install_github(repo="cam-ctu/cctu", ref=cctu_version, INSTALL_opts="--install-tests" , build_vignettes=TRUE)
+#remotes::install_github(repo="cam-ctu/cctu", ref=cctu_version, INSTALL_opts="--install-tests" , build_vignettes=TRUE)
