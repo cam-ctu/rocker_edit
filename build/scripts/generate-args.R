@@ -178,22 +178,22 @@ rocker_versioned_args <- function(
     dplyr::slice_max(ubuntu_release_date, with_ties = FALSE, by = r_version) |>
     tidyr::expand_grid(
       readr::read_tsv(
-        rstudio_versions_file,
-        show_col_types = FALSE
-      )
-    ) |>
-    dplyr::filter(
-      r_freeze_date > rstudio_commit_date | is.na(r_freeze_date)
-    )|>
-    tidyr::expand_grid(
-      readr::read_tsv(
         cctu_versions_file,
         show_col_types = FALSE,
         col_types = list(cctu_version = readr::col_character())
       )
     ) |>
     dplyr::filter(r_freeze_date > cctu_commit_date | is.na(r_freeze_date)) |>
-    dplyr::slice_max(cctu_commit_date, with_ties = FALSE, by = r_version) 
+    dplyr::slice_max(cctu_commit_date, with_ties = FALSE, by = r_version) |>
+    tidyr::expand_grid(
+      readr::read_tsv(
+        rstudio_versions_file,
+        show_col_types = FALSE
+      )
+    ) |>
+    dplyr::filter(
+      r_freeze_date > rstudio_commit_date | is.na(r_freeze_date)
+    )
 
   df_available_rstudio <- df_all |>
     dplyr::distinct(ubuntu_series, rstudio_version) |>
