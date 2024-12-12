@@ -55,6 +55,8 @@ COPY scripts/bin/ /rocker_scripts/bin/
 #RUN /rocker_scripts/install_verse.sh
 #
 COPY scripts/install_cctu.sh /rocker_scripts/install_cctu.sh
+COPY build/args/history.tsv /rocker_scripts/history.tsv
+
 RUN /rocker_scripts/install_cctu.sh
 
 COPY scripts /rocker_scripts

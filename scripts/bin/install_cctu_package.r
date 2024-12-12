@@ -18,14 +18,14 @@ message("test order")
 message( "R_VERSION parameter = ", args)
 
 
-# .get_github_commit_date <- function(commit_url) {
-#   commit_date <- httr::GET(commit_url, httr::add_headers(accept = "application/vnd.github.v3+json")) |>
-#     httr::content() |>
-#     purrr::pluck("commit", "committer", "date", .default = NA) |>
-#     as.Date()
-#   
-#   commit_date
-# }
+.get_github_commit_date <- function(commit_url) {
+  commit_date <- httr::GET(commit_url, httr::add_headers(accept = "application/vnd.github.v3+json")) |>
+    httr::content() |>
+    purrr::pluck("commit", "committer", "date", .default = NA) |>
+    as.Date()
+
+  commit_date
+}
 
 message("pull cctu version history")
 
@@ -49,7 +49,7 @@ message("pull cctu version history")
 
 message("compare to rversion history")
 
-df_args <- read.csv("build/args/history.tsv",sep="\t",
+df_args <- read.csv("rocker_scripts/history.tsv",sep="\t",
                     colClasses=c("character","Date","character","Date","character")
                     )
 
