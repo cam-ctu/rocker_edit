@@ -1,0 +1,14 @@
+﻿File,Name,Pull,Push,Workflow  Dispatch,Follow-on,Schedule,Creates a Pull,,Comments
+Bakefile-test,test for docker-bake.json,x  - when bakefiles change,,X,,,,,
+core,Build & Push Core images,,x  only when dockerfiles/*_devel.Dockerfile changes,x,release,,,,
+release,Create new release,,x - only when build/matrix/latest changes,x,,,,,
+devel, Build & Push R devel images,,,x,,midnight,,,
+dockerfiles, Update container definition files,,,x,,10,X,,
+experimental,Build & Push experimental images,,,x,,1st of month midnight,,,
+extra, Build & Push extra images,,,x,,,,,Only place to build latest-two
+linting,linting,x,,,,,,,Check code for sytax errors
+r-build-test,test for install R from source,x  - when a complex set of files changes,,,,,,,Dry run of docker builds
+repo_update,Update Repo from Rocker_Versions2,,,X,,5,X,,
+reports,Report published images,x - only if script changes,x - only if script changes,x,"core, extra, experimental",,,,Makes wikis and other pages of documentation
+scripts-test,test for rocker scripts,x - complex set of files check for changes,,x,,,,,Not sure ???
+test-experimental, test for experimental scripts,x,,x,,,,,
