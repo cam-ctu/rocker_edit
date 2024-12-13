@@ -37,6 +37,14 @@ the yml file..  Not well documented at alll!!
 
 ---------
 
+Work out how extra.docker-bake.json is created,  so as to add in the extra fields. for cctu..
+
+Check up on reports creation,  maybe edit to use the shug0131/rocker_version2. 
+
+try out devel...
+
+Check that update-repo works -- weird error for copying across Makefile...
+
 
 
 # map the actions triggers to understand better. 
