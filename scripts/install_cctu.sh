@@ -18,25 +18,21 @@ apt_install \
     gsl-bin\
     libgsl-dev
 
-echo "first install"
+
 
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
-    kableExtra
-#    rstantools\
-#    rms
-
-echo "second install"    
-# Need to modify this to lookup the CCTU_VERSIOM based on $R_VERSION
+    kableExtra \
+    rstantools \
+    rms
 
 
-#ln -sf /rocker_scripts/bin/install_cctu_package.r /usr/local/bin/install_cctu_package.r
-#echo "link set"
-
-#Rscript rocker_scripts/bin/install_cctu_package.r "$R_VERSION"
 
 
-echo "my script"    
+
+
+
+
 R -q -e "remotes::install_github(repo=\"cam-ctu/cctu\", ref=\"$CCTU_VERSION\", INSTALL_opts=\"--install-tests\" , build_vignettes=TRUE)"
 
 

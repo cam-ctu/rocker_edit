@@ -4,6 +4,7 @@
 * See workflows repo-update.  There any file with "-master" as the copy is overwritten by another file with adaptations for cctu. Also build/templates/dockerilfes/cctu.Dockerfile.txt is added ()
 - Should be alerted if the -master changes, which may then need the equivalent overwrite file changed by hand.
 
+
 * do I need to check the version of CCTU-- there is an env CCTU_VERSION=0.8.1 in the docker file
 -  yes see lines 315-400 of build/make-stacks.R   - needs to go into build/scripts/geenerate-variables.
 But this will break _a lot_ of the main repo files.  Modify install_cctu.sh to run an R script that can 

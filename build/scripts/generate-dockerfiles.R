@@ -57,7 +57,7 @@ tibble::tibble(
     # "r-ver",
     # "rstudio",
     # "tidyverse",
-     "verse",
+    # "verse",
     # "geospatial",
     # "shiny",
     # "shiny-verse",

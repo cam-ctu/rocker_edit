@@ -37,11 +37,11 @@ the yml file..  Not well documented at alll!!
 
 ---------
 
-redit to only build cctu,  running all the shell scripts directly. Delete bakups.
-tidy up file naming -master, edit, etc...
-add back in the extra packages for cctu  rmb...
-map the actions triggers to understand better. 
-remove building of extras. 
+
+
+# map the actions triggers to understand better. 
+
+
 force 4.4.1 to build
 give better README.me.  Maybe edit the reports and wikis. 
 
