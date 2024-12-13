@@ -34,6 +34,7 @@ jobs:
           cp -rp rocker/.github/workflows/* ./.github/workflows
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
+          co -rp rocker/build/reports/* ./build/reports
           cp  rocker/build/scripts/clean-files.R ./build/scripts/clean-files.R
           cp  rocker/build/scripts/generate-args.R ./build/scripts/generate-args-master.R
           cp  rocker/build/scripts/generate-bakefiles.R ./build/scripts/generate-bakefiles-master.R
