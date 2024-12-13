@@ -1,6 +1,11 @@
 {
   "group": [
     {
+      "cctu": [
+        {
+          "targets": ["cctu"]
+        }
+      ],
       "default": [
         {
           "targets": ["cuda", "ml", "ml-verse", "binder"]
@@ -19,6 +24,18 @@
     }
   ],
   "target": {
+    "cctu": {
+      "dockerfile": "dockerfiles/cctu_{{r_version}}.Dockerfile",
+      "labels": {
+        "org.opencontainers.image.title": "shug0131/cctu",
+        "org.opencontainers.image.description": "cctu versions",
+        "org.opencontainers.image.base.name": "docker.io/shug0131/cctu:{{r_version}}",
+        "org.opencontainers.image.version": "R-{{r_version}}"
+      },
+      "platforms": ["linux/amd64"],
+      "cache-to": ["type=inline"]
+    },
+    
     "binder": {
       "dockerfile": "dockerfiles/binder_{{r_version}}.Dockerfile",
       "labels": {
