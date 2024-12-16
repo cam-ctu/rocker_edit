@@ -22,7 +22,7 @@ jobs:
       image: rocker/tidyverse:latest
     steps:
       - name: checkout this repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.4
       - name: copy from the rocker_versiond 2 repo
         uses: actions/checkout@v4
         with:
@@ -30,7 +30,7 @@ jobs:
           path: './rocker'
       - name: copy files across
         run: |
-          cp -p rocker/Makefile  ./Makefile
+          cp -pf rocker/Makefile  ./Makefile
           cp -rp rocker/scripts/*  ./scripts
           cp -rp rocker/.github/workflows/* ./.github/workflows_original
           cp  rocker/build/README.md ./build
@@ -50,9 +50,9 @@ jobs:
 
       - name: Set as safe for following git commands
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-      - name: install packages
-        run: |
-          install2.r --error --skipinstalled -n -1 pak
+  #    - name: install packages
+  #      run: |
+  #        install2.r --error --skipinstalled -n -1 pak
 
       - name: Create Pull Request
         id: cpr
