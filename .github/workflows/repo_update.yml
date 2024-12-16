@@ -30,8 +30,9 @@ jobs:
           path: './rocker'
       - name: copy files across
         run: |
-          cp -rp rocker/.github/workflows/* .github/workflows_original
-          cp -p rocker/Makefile  Makefile
+          ls -l rocker
+          cp -rp rocker/.github/workflows/* ./.github/workflows_original
+          cp -p rocker/Makefile  ./Makefile
           cp -rp rocker/scripts/*  ./scripts
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
