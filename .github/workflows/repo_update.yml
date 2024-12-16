@@ -21,7 +21,6 @@ jobs:
     container:
       image: rocker/tidyverse:latest
     steps:
-      - uses: actions/checkout@v4.1.4
       - name: copy from the rocker_versiond 2 repo
         uses: actions/checkout@v4.1.4
         with:
@@ -31,7 +30,7 @@ jobs:
         run: |
           cp -p rocker/Makefile  ./Makefile
           cp -rp rocker/scripts/*  ./scripts
-          cp -rp rocker/.github/workflows/* ./.github/workflows
+          cp -rp rocker/.github/workflows/* ./.github/workflows_original
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
           co -rp rocker/build/reports/* ./build/reports
@@ -46,18 +45,18 @@ jobs:
           cp rocker/build/templates/bakefiles/extra.docker-bake.json ./build/templates/bakefiles/extra.docker-bake.json
           cp rocker/build/templates/bakefiles/experimental.docker-bake.json ./build/templates/bakefiles/experimental.docker-bake.json
           cp -rp rocker/tests/* ./tests
-      
+
       - name: Set as safe for following git commands
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: install packages
         run: |
           install2.r --error --skipinstalled -n -1 pak
-      
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.WORKFLOW }} 
+          token: ${{ secrets.WORKFLOW }}
           commit-message: Automatic update of repo copy and edit
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           signoff: false
