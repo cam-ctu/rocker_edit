@@ -22,9 +22,9 @@ jobs:
       image: rocker/tidyverse:latest
     steps:
       - name: checkout this repo
-        uses: actions/checkout@v4.1.4
+        uses: actions/checkout@v4
       - name: copy from the rocker_versiond 2 repo
-        uses: actions/checkout@v4.1.4
+        uses: actions/checkout@v4
         with:
           repository: rocker-org/rocker-versioned2
           path: './rocker'
