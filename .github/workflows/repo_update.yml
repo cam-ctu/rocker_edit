@@ -18,8 +18,8 @@ jobs:
   createPullRequest:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    container:
-      image: rocker/tidyverse:latest
+#    container:
+#      image: rocker/tidyverse:latest
     steps:
       - name: checkout this repo
         uses: actions/checkout@v4.1.4

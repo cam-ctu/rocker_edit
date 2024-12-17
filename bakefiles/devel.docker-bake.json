@@ -36,7 +36,7 @@
         "docker.io/rocker/rstudio:devel",
         "docker.io/rocker/tidyverse:devel",
         "docker.io/rocker/verse:devel",
-        "docker.io/shug0131/cctu"
+        "docker.io/shug0131/cctu:devel"
       ]
     }
   }
