@@ -53,5 +53,5 @@ jobs:
           # Build shug0131/cctu
           BAKE_JSON="bakefiles/${{ matrix.bakefile }}" \
           BAKE_OPTION=--push\ --set=*.cache-to=type=local,dest="${CACHE_DIR}"\ --set=*.cache-from=type=local,src="${CACHE_DIR}"\
-          \ --set=*.cache-from=type=gha,scope=svn-revision-"${{ needs.check-revision.outputs.svn-revision }}-cctu"\
+          \ --set=*.cache-from=type=gha,scope=svn-revision-"${{ needs.check-revision.outputs.svn-revision }}-cctu" \
           make bake-json/cctu
