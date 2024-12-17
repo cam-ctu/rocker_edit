@@ -38,8 +38,8 @@
         "docker.io/rocker/verse:devel",
         "docker.io/shug0131/cctu:devel"
       ]
-    }
-  },
+    },
+
       "r-ver": {
       "dockerfile": "dockerfiles/r-ver_devel.Dockerfile",
       "labels": {
