@@ -1,13 +1,6 @@
 {
   "group": [
     {
-      "cctu": [
-        {
-          "targets": [
-            "cctu"
-          ]
-        }
-      ],
       "default": [
         {
           "targets": [
@@ -37,21 +30,6 @@
     }
   ],
   "target": {
-    "cctu": {
-      "dockerfile": "dockerfiles/cctu_4.4.2.Dockerfile",
-      "labels": {
-        "org.opencontainers.image.title": "shug0131/cctu",
-        "org.opencontainers.image.description": "cctu versions",
-        "org.opencontainers.image.base.name": "docker.io/shug0131/cctu:4.4.2",
-        "org.opencontainers.image.version": "R-4.4.2"
-      },
-      "platforms": [
-        "linux/amd64"
-      ],
-      "cache-to": [
-        "type=inline"
-      ]
-    },
     "binder": {
       "dockerfile": "dockerfiles/binder_4.4.2.Dockerfile",
       "labels": {
