@@ -37,9 +37,7 @@ jobs:
       - id: set-matrix
         run: |
           CONTENT_MAIN="$(jq -r 'tostring' build/matrix/all.json)"
-          CONTENT_EXTRA="$(jq -s -r '.[0] + { group: [.[1].group[] | keys[] | select(. != "default")] } | tostring' build/matrix/latest-two.json )"
           echo "matrix-main=${CONTENT_MAIN}" >> "$GITHUB_OUTPUT"
-          echo "matrix-extra=${CONTENT_EXTRA}" >> "$GITHUB_OUTPUT"
           echo "${CONTENT_MAIN}"
 
   inspect-main:
