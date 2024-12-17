@@ -21,7 +21,7 @@ bake-json-test-all: $(foreach json, $(wildcard bakefiles/*.docker-bake.json), $(
 bake-json-test-groups: $(foreach json, $(wildcard bakefiles/*.docker-bake.json), $(foreach target, $(shell jq '.group[] | keys[]' -r $(json)), bake-json-test/$(json)/$(target)))
 
 
-IMAGE_SOURCE ?= https://github.com/rocker-org/rocker-versioned2
+IMAGE_SOURCE ?= https://github.com/cam-ctu/rocker_edit
 COMMIT_HASH := $(shell git rev-parse HEAD)
 IMAGE_REVISION ?= $(COMMIT_HASH)
 
