@@ -39,13 +39,7 @@ the yml file..  Not well documented at alll!!
 
 Extras is now not used.  There is a new action lates-two that build the latest two
 
-
-
 Check up on reports creation,  maybe edit to use the shug0131/rocker_version2. 
-
-try out devel...
-
-
 
 
 
@@ -55,7 +49,6 @@ try out devel...
 force 4.4.1 to build
 give better README.me.  Maybe edit the reports and wikis. 
 
-make pull request to install_verse.sh  on the rocker repo
 
 Look at Validation to see scale of needs. Add extra packages?
 Try to get out the next 4.4.1 for live use before holidays.

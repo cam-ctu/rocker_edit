@@ -12,3 +12,4 @@ repo_update,Update Repo from Rocker_Versions2,,,X,,midnight,X,,
 reports,Report published images,x - only if script changes,x - only if script changes,x,"core, extra, experimental",,,,Makes wikis and other pages of documentation
 scripts-test,test for rocker scripts,x - complex set of files check for changes,,x,,,,,Not sure ???
 test-experimental, test for experimental scripts,x,,x,,,,,
+latest_two, Build & Push Latest Two images,,,X,,,,,Added to force a build of last two. Easier than changing extra.yml.
