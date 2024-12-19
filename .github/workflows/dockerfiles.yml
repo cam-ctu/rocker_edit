@@ -34,7 +34,7 @@ jobs:
           commit-message: Automatic update of container definition files
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           signoff: false
-          branch: auto-detected-updates
+          branch: auto-detected-docker-updates
           delete-branch: true
           title: 'Automatic update of container definition files'
           body: |
