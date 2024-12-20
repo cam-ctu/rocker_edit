@@ -1,3 +1,24 @@
+Main readme file to explain 
+* what was done
+* history and old repo
+* how to maintain with pull request and auto checks
+* Link to the UAT page
+
+
+* todo - testing/linting
+* devel version fails, but so does the main repo
+
+---
+
+UAT -see if you can make the test recommende carry on wtihotu firing errors
+
+Release cctu next version
+ -  local env testing
+ - add km plots
+
+
+
+
 use the dockerfiles.yaml to make a pull reqest that can check for changes
 a)  checkout the main rocker repo
 b) copy across -
@@ -18,14 +39,8 @@ make dir
 	bakefiles
 	dockerfiles
 
-run rscript that makes the ammendments needed.
-	
-	
-set up Docker account for cam-ctu
-use kdiff3  with a merge on the old repo to work out what needs to be edited and how
 
-
-Trim down the amount that is copied across.  maybe not all the scripts, templates (but might still want to see differences if changes are made in main repo)
+	
 
 
 I had to 1) within organisation settings allow tokens 2) from my account (top right> settings> Developer Settings> TOkens) 
@@ -37,21 +52,9 @@ the yml file..  Not well documented at alll!!
 
 ---------
 
-Extras is now not used.  There is a new action lates-two that build the latest two
-
-Check up on reports creation,  maybe edit to use the shug0131/rocker_version2. 
 
 
 
-# map the actions triggers to understand better. 
-
-
-force 4.4.1 to build
-give better README.me.  Maybe edit the reports and wikis. 
-
-
-Look at Validation to see scale of needs. Add extra packages?
-Try to get out the next 4.4.1 for live use before holidays.
 
 
 

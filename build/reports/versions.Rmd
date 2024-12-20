@@ -1,5 +1,5 @@
 ---
-title: R, CRAN, RStudio Server versions correspondance
+title: R, CRAN, RStudio Server, cctu package versions correspondance
 output:
   github_document:
     toc: false
@@ -14,9 +14,13 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 knitr::opts_knit$set(root.dir = rprojroot::find_root_file(criterion = rprojroot::is_git_root))
 ```
 
-In order to get coherent versioned Rocker containers, versions of R, R packages, RStudio Server, and TeX packages are match on a time scale by default.
+In order to get coherent versioned Rocker containers, versions of R, R packages, RStudio Server, cctu, and TeX packages are match on a time scale by default.
 
 For information about old images with 3.X.X tags, please check [the `rocker-org/rocker-versioned` repository](https://github.com/rocker-org/rocker-versioned/blob/master/VERSIONS.md).
+
+For cctu image pre 4.4.1  please see the [archived old repo](https://github.com/shug0131/rocker-versioned2)
+
+The images are stored in [docker](https://registry.hub.docker.com/r/shug0131/cctu) and [github](https://github.com/cam-ctu/rocker_edit/pkgs/container/cctu)
 
 ## Rules
 
@@ -44,7 +48,8 @@ readr::read_tsv(
     `R release date` = r_release_date,
     `Ubuntu version` = ubuntu_version,
     `CRAN date` = r_freeze_date,
-    `RStudio version` = rstudio_version
+    `RStudio version` = rstudio_version,
+    `cctu package version`= cctu_version
   )
 ```
 
