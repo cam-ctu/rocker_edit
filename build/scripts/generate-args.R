@@ -242,7 +242,11 @@ dplyr::add_row(
     utils::tail(1),
   ctan = x$ctan |>
     utils::tail(1)
-))()
+))() |>
+  dplyr::filter(as.Date("2024-06-01") < r_release_date)
+
+# start from version 4.4.1 when this repo was created
+
 
 
 df_args |>
