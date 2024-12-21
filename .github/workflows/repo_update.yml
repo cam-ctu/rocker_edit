@@ -35,10 +35,10 @@ jobs:
           cp -rp rocker/scripts/*  ./scripts
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
-          cp rocker/build/_Sidebar.md ./build/reports
-          cp rocker/build/template.Rmd ./build/reports
-          cp rocker/build/versions.Rmd ./build/reports/versions-master.Rmd
-          cp rocker/build/wiki_home.Rmd ./build/reports
+          cp rocker/build/reports/_Sidebar.md ./build/reports
+          cp rocker/build/reports/template.Rmd ./build/reports
+          cp rocker/build/reports/versions.Rmd ./build/reports/versions-master.Rmd
+          cp rocker/build/reports/wiki_home.Rmd ./build/reports
           cp  rocker/build/scripts/clean-files.R ./build/scripts/clean-files.R
           cp  rocker/build/scripts/generate-args.R ./build/scripts/generate-args-master.R
           cp  rocker/build/scripts/generate-bakefiles.R ./build/scripts/generate-bakefiles-master.R
