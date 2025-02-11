@@ -45,7 +45,7 @@ jobs:
           cp  rocker/build/scripts/generate-dockerfiles.R ./build/scripts/generate-dockerfiles-master.R
           cp  rocker/build/scripts/generate-matrix.R ./build/scripts/generate-matrix.R
           cp  rocker/build/scripts/generate-variables.R ./build/scripts/generate-variables-master.R
-          cp -r rocker/build/templates/dockerfiles/* ./build/templates/dockerfiles
+#          cp -r rocker/build/templates/dockerfiles/* ./build/templates/dockerfiles
           cp rocker/build/templates/bakefiles/main.docker-bake.json ./build/templates/bakefiles/main.docker-bake-master.json
           cp rocker/build/templates/bakefiles/extra.docker-bake.json ./build/templates/bakefiles/extra.docker-bake.json
           cp rocker/build/templates/bakefiles/experimental.docker-bake.json ./build/templates/bakefiles/experimental.docker-bake.json
