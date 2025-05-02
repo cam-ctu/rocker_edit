@@ -53,7 +53,10 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS" \
     ordinal \
     consort \
     coxme \
-    mice
+    mice \
+    lintr \
+    styler \
+    broom.mixed 
     
 #install2.r --error  --skipmissing --deps FALSE --skipinstalled -n "$NCPUS" \   
 #    mice
