@@ -33,7 +33,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v4.1.4
+      - uses: actions/checkout@v5
       - id: set-matrix
         run: |
           JSON="build/matrix/latest.json"
@@ -55,7 +55,7 @@ jobs:
       fail-fast: false
       matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     steps:
-      - uses: actions/checkout@v4.1.4
+      - uses: actions/checkout@v5
       - name: Clean up
         run: |
           docker image prune --all --force
