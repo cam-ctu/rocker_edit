@@ -54,7 +54,7 @@ COPY scripts/install_verse.sh /rocker_scripts/install_verse.sh
 COPY scripts/install_texlive_edit.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
-ENV CCTU_VERSION="0.8.8"
+ENV CCTU_VERSION="0.8.9"
 COPY scripts/install_cctu.sh /rocker_scripts/install_cctu.sh
 
 
