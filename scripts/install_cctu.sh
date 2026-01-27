@@ -16,7 +16,8 @@ function apt_install() {
 apt_install \
     tk\
     gsl-bin\
-    libgsl-dev
+    libgsl-dev\
+    libsecret-1-dev
 
 
 
@@ -56,7 +57,8 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS" \
     mice \
     lintr \
     styler \
-    broom.mixed 
+    broom.mixed \
+    redcapAPI
     
 #install2.r --error  --skipmissing --deps FALSE --skipinstalled -n "$NCPUS" \   
 #    mice
