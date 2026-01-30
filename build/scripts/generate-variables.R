@@ -118,7 +118,7 @@ cctu_versions <-function(..., .n = 10){
       commit_url = glue::glue("https://api.github.com/repos/cam-ctu/cctu/commits/{oid}"),
       .keep = "none"
     ) |>
-    dplyr::slice_tail(n = .n) |>
+    dplyr::slice_head(n = .n) |>
     dplyr::rowwise()|>
     dplyr::mutate(cctu_commit_date = get_github_commit_date(commit_url)) |>
     dplyr::ungroup() |>
@@ -131,7 +131,7 @@ cctu_versions <-function(..., .n = 10){
 }
 
 
-
+ 
 r_versions_with_freeze_dates() |>
   readr::write_tsv("build/variables/r-versions.tsv", na = "")
 
