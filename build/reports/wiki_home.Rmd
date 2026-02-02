@@ -48,7 +48,7 @@ df_definitions <- fs::dir_ls(
   path = "bakefiles",
   regexp = r"(.+\.docker-bake.json$)"
 ) |>
-  as.character() |> 
+  as.character() |>
   tibble::tibble(file = _) |>
   dplyr::arrange(
     stringr::str_extract(file, r"(\d+\.\d+\.\d+)") |>
