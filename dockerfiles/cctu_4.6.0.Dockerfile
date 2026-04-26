@@ -2,14 +2,14 @@
 
 FROM docker.io/library/ubuntu:noble
 
-ENV R_VERSION="4.4.3"
+ENV R_VERSION="4.6.0"
 ENV R_HOME="/usr/local/lib/R"
 ENV TZ="Etc/UTC"
 
 COPY scripts/install_R_source_edit.sh /rocker_scripts/install_R_source.sh
 RUN /rocker_scripts/install_R_source.sh
 
-ENV CRAN="https://p3m.dev/cran/__linux__/noble/2025-04-10"
+ENV CRAN="https://p3m.dev/cran/__linux__/noble/latest"
 ENV LANG=en_US.UTF-8
 
 
@@ -27,7 +27,7 @@ COPY scripts/install_tidyverse.sh /rocker_scripts/install_tidyverse.sh
 RUN /rocker_scripts/install_tidyverse.sh
 
 ENV S6_VERSION="v2.1.0.2"
-ENV RSTUDIO_VERSION="2024.12.1+563"
+ENV RSTUDIO_VERSION="2026.04.0+526"
 ENV DEFAULT_USER="rstudio"
 
 COPY scripts/install_rstudio.sh /rocker_scripts/install_rstudio.sh
@@ -47,14 +47,14 @@ RUN /rocker_scripts/install_pandoc.sh
 COPY scripts/install_quarto.sh /rocker_scripts/install_quarto.sh
 RUN /rocker_scripts/install_quarto.sh
 
-ENV CTAN_REPO="https://www.texlive.info/tlnet-archive/2025/04/10/tlnet"
+ENV CTAN_REPO="https://mirror.ctan.org/systems/texlive/tlnet"
 ENV PATH="$PATH:/usr/local/texlive/bin/linux"
 
 COPY scripts/install_verse.sh /rocker_scripts/install_verse.sh
 COPY scripts/install_texlive_edit.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
-ENV CCTU_VERSION="0.8.6"
+ENV CCTU_VERSION="0.8.11"
 COPY scripts/install_cctu.sh /rocker_scripts/install_cctu.sh
 
 
