@@ -23,13 +23,15 @@ apt_install \
 
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
-    rstantools \
-    rms
+    rstantools\
+    kableExtra
+
+install2.r --error  --skipmissing --skipinstalled -n "$NCPUS"  rms
+
+#  Don't install teh SUggest dependencies  as this includes rmsb, which is failing compilation    
 
 R -q -e "remotes::install_github(repo=\"cam-ctu/cctu\", ref=\"$CCTU_VERSION\", INSTALL_opts=\"--install-tests\" , build_vignettes=TRUE)"
 
-install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
-    kableExtra 
   
 
 
