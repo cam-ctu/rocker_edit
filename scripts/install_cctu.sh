@@ -23,18 +23,18 @@ apt_install \
 
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
-    kableExtra \
-    rstantools \
-    rms
+    rstantools\
+    remotes\
+    rms\
+    kableExtra
 
 
-
-
-
-
-
+#  now we explicitly need to install remotes package
 
 R -q -e "remotes::install_github(repo=\"cam-ctu/cctu\", ref=\"$CCTU_VERSION\", INSTALL_opts=\"--install-tests\" , build_vignettes=TRUE)"
+
+  
+
 
 
 # The GSL package requires this, and MICE needs gsl. I think Ubuntu:latest doesn't have it
