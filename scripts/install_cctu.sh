@@ -26,7 +26,7 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     rstantools\
     kableExtra
 
-install2.r --error  --skipmissing --skipinstalled -n "$NCPUS"  rms
+# install2.r --error  --skipmissing --skipinstalled -n "$NCPUS"  rms
 
 #  Don't install teh SUggest dependencies  as this includes rmsb, which is failing compilation    
 
