@@ -35,3 +35,7 @@ supported_versions |>
 supported_versions |>
   utils::tail(1) |>
   write_matrix("build/matrix/latest.json")
+
+supported_versions |>
+  utils::tail(2) |>
+  write_matrix("build/matrix/latest-two.json")

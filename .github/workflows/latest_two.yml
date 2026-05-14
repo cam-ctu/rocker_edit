@@ -1,6 +1,11 @@
 name: Build & Push Latest Two images
 
 on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - "build/matrix/latest-two.json"
   workflow_dispatch:
 
 concurrency:
