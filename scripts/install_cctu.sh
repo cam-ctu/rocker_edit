@@ -24,6 +24,7 @@ apt_install \
 install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
     rstantools\
+    remotes\
     kableExtra
 
 # install2.r --error  --skipmissing --skipinstalled -n "$NCPUS"  rms
