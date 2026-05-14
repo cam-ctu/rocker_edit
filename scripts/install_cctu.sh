@@ -25,6 +25,7 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS"  \
     xslt \
     rstantools\
     remotes\
+    rms\
     kableExtra
 
 # install2.r --error  --skipmissing --skipinstalled -n "$NCPUS"  rms
