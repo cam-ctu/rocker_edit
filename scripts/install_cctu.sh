@@ -58,7 +58,9 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS" \
     lintr \
     styler \
     broom.mixed \
-    redcapAPI
+    redcapAPI \
+    quarto \
+    tinytable
     
 #install2.r --error  --skipmissing --deps FALSE --skipinstalled -n "$NCPUS" \   
 #    mice
