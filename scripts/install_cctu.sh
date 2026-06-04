@@ -60,7 +60,9 @@ install2.r --error  --skipmissing --deps TRUE --skipinstalled -n "$NCPUS" \
     broom.mixed \
     redcapAPI \
     quarto \
-    tinytable
+    tinytable \
+    ggsurvfit \
+    emmeans 
     
 #install2.r --error  --skipmissing --deps FALSE --skipinstalled -n "$NCPUS" \   
 #    mice
