@@ -64,11 +64,15 @@ jobs:
             r-ver.cache-from=type=gha,scope=svn-revision-${{ needs.check-revision.outputs.svn-revision }}-rstudio-${{ matrix.pair }}
             r-ver.cache-from=type=gha,scope=svn-revision-${{ needs.check-revision.outputs.svn-revision }}-tidyverse-${{ matrix.pair }}
             r-ver.cache-to=type=gha,scope=svn-revision-${{ needs.check-revision.outputs.svn-revision }}-r-ver-${{ matrix.pair }}
+            r-ver.tags=
             r-ver.output=type=image,name=docker.io/rocker/r-ver,push-by-digest=true,name-canonical=true,push=true
       - name: Export digest
         env:
-          DIGEST: ${{ fromJSON(steps.bake.outputs.metadata)['r-ver']['containerimage.digest'] }}
+          METADATA: ${{ steps.bake.outputs.metadata }}
         run: |
+          DIGEST="$(jq -er '."r-ver"."containerimage.digest"' <<<"${METADATA}")"
+          DIGEST="${DIGEST#sha256:}"
+          [[ "${DIGEST}" =~ ^[0-9a-f]{64}$ ]]
           mkdir -p "${{ runner.temp }}/digests"
           touch "${{ runner.temp }}/digests/${DIGEST}"
       - name: Upload digest
@@ -100,7 +104,7 @@ jobs:
       - name: Create multi-platform manifest
         working-directory: ${{ runner.temp }}/digests
         run: |
-          printf 'docker.io/rocker/r-ver@%s\n' * \
+          printf 'docker.io/rocker/r-ver@sha256:%s\n' * \
             | xargs docker buildx imagetools create \
               --tag docker.io/rocker/r-ver:devel
       - name: Inspect multi-platform manifest
