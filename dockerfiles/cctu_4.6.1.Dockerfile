@@ -27,7 +27,7 @@ COPY scripts/install_tidyverse.sh /rocker_scripts/install_tidyverse.sh
 RUN /rocker_scripts/install_tidyverse.sh
 
 ENV S6_VERSION="v2.1.0.2"
-ENV RSTUDIO_VERSION="2026.10.0+233"
+ENV RSTUDIO_VERSION="2026.10.1+239"
 ENV DEFAULT_USER="rstudio"
 
 COPY scripts/install_rstudio.sh /rocker_scripts/install_rstudio.sh
@@ -54,7 +54,7 @@ COPY scripts/install_verse.sh /rocker_scripts/install_verse.sh
 COPY scripts/install_texlive_edit.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
-ENV CCTU_VERSION="0.8.15"
+ENV CCTU_VERSION="0.8.16"
 COPY scripts/install_cctu.sh /rocker_scripts/install_cctu.sh
 
 
