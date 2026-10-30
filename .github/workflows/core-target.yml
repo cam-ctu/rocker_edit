@@ -56,8 +56,6 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: ${{ inputs.revision }}
-          submodules: 'true' # Or 'true' depending on your nesting
-          token: ${{ secrets.GITHUB_TOKEN }} 
       - name: Read and validate Bake publish configuration
         id: config
         run: |
