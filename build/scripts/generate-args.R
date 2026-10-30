@@ -208,17 +208,7 @@ rocker_versioned_args <- function(
       )
     ) |>
     dplyr::filter(r_freeze_date > cctu_commit_date | is.na(r_freeze_date)) |>
-    dplyr::slice_max(cctu_commit_date, with_ties = FALSE, by = r_version) |>
-    tidyr::expand_grid(
-      readr::read_tsv(
-        rstudio_versions_file,
-        show_col_types = FALSE
-      )
-    ) |>
-    dplyr::filter(
-      r_freeze_date > rstudio_commit_date | is.na(r_freeze_date)
-    )
-
+    dplyr::slice_max(cctu_commit_date, with_ties = FALSE, by = r_version) 
 
   df_all <- df_base |>
     tidyr::expand_grid(
