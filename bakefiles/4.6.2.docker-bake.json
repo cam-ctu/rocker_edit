@@ -14,7 +14,7 @@
     "r-ver": {
       "dockerfile": "dockerfiles/r-ver_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/r-ver",
+        "org.opencontainers.image.title": "shug0131/r-ver",
         "org.opencontainers.image.description": "Reproducible builds to fixed version of R",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
@@ -102,7 +102,7 @@
     "rstudio": {
       "dockerfile": "dockerfiles/rstudio_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/rstudio",
+        "org.opencontainers.image.title": "shug0131/rstudio",
         "org.opencontainers.image.description": "RStudio Server with fixed version of R",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
@@ -190,7 +190,7 @@
     "tidyverse": {
       "dockerfile": "dockerfiles/tidyverse_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/tidyverse",
+        "org.opencontainers.image.title": "shug0131/tidyverse",
         "org.opencontainers.image.description": "Version-stable build of R, RStudio Server, and R packages.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
@@ -393,7 +393,7 @@
     "geospatial": {
       "dockerfile": "dockerfiles/geospatial_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/geospatial",
+        "org.opencontainers.image.title": "shug0131/geospatial",
         "org.opencontainers.image.description": "Docker-based Geospatial toolkit for R, built on versioned Rocker image.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
@@ -480,7 +480,7 @@
     "shiny": {
       "dockerfile": "dockerfiles/shiny_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/shiny",
+        "org.opencontainers.image.title": "shug0131/shiny",
         "org.opencontainers.image.description": "Shiny Server on versioned Rocker image.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
@@ -567,7 +567,7 @@
     "shiny-verse": {
       "dockerfile": "dockerfiles/shiny-verse_4.6.2.Dockerfile",
       "labels": {
-        "org.opencontainers.image.title": "rocker/shiny-verse",
+        "org.opencontainers.image.title": "shug0131/shiny-verse",
         "org.opencontainers.image.description": "Rocker Shiny image + Tidyverse R packages. Uses version-stable image.",
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:resolute",
         "org.opencontainers.image.version": "R-4.6.2",
