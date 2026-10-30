@@ -203,6 +203,29 @@ jobs:
     secrets:
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      
+  cctu:
+    needs:
+      - prepare
+      - verse
+    if: >-
+      !cancelled() && needs.verse.result == 'success' &&
+      needs.prepare.outputs.rstudio-versions != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ${{ fromJSON(needs.prepare.outputs.rstudio-versions) }}
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/core-target.yml
+    with:
+      version: ${{ matrix.version }}
+      target: cctu
+      revision: ${{ needs.prepare.outputs.revision }}
+    secrets:
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
   geospatial:
     needs:
