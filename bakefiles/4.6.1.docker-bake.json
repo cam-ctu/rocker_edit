@@ -32,23 +32,23 @@
       ],
       "tags": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1"
+        "ghcr.io/cam-ctu/r-ver:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "rstudio": {
@@ -72,23 +72,23 @@
       ],
       "tags": [
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1"
+        "ghcr.io/cam-ctu/rstudio:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "tidyverse": {
@@ -111,23 +111,23 @@
       ],
       "tags": [
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1"
+        "ghcr.io/cam-ctu/tidyverse:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "verse": {
@@ -150,23 +150,23 @@
       ],
       "tags": [
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1"
+        "ghcr.io/cam-ctu/verse:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "cctu": {
@@ -212,23 +212,23 @@
       ],
       "tags": [
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1"
+        "ghcr.io/cam-ctu/geospatial:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "shiny": {
@@ -251,23 +251,23 @@
       ],
       "tags": [
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1"
+        "ghcr.io/cam-ctu/shiny:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     },
     "shiny-verse": {
@@ -290,23 +290,23 @@
       ],
       "tags": [
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ],
       "cache-from": [
         "docker.io/shug0131/r-ver:4.6.1",
-        "ghcr.io/rocker-org/r-ver:4.6.1",
+        "ghcr.io/cam-ctu/r-ver:4.6.1",
         "docker.io/shug0131/rstudio:4.6.1",
-        "ghcr.io/rocker-org/rstudio:4.6.1",
+        "ghcr.io/cam-ctu/rstudio:4.6.1",
         "docker.io/shug0131/tidyverse:4.6.1",
-        "ghcr.io/rocker-org/tidyverse:4.6.1",
+        "ghcr.io/cam-ctu/tidyverse:4.6.1",
         "docker.io/shug0131/verse:4.6.1",
-        "ghcr.io/rocker-org/verse:4.6.1",
+        "ghcr.io/cam-ctu/verse:4.6.1",
         "docker.io/shug0131/geospatial:4.6.1",
-        "ghcr.io/rocker-org/geospatial:4.6.1",
+        "ghcr.io/cam-ctu/geospatial:4.6.1",
         "docker.io/shug0131/shiny:4.6.1",
-        "ghcr.io/rocker-org/shiny:4.6.1",
+        "ghcr.io/cam-ctu/shiny:4.6.1",
         "docker.io/shug0131/shiny-verse:4.6.1",
-        "ghcr.io/rocker-org/shiny-verse:4.6.1"
+        "ghcr.io/cam-ctu/shiny-verse:4.6.1"
       ]
     }
   }
