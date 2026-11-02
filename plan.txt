@@ -1,4 +1,21 @@
-Main readme file to explain 
+Nov 26
+
+building verse fails, which is mirrored on parent repo.
+
+Examine workflows to see what is legacy and what is new. Any updates needed?
+Want to always build the last-but-one when we update to new version ...
+Why does build-core only currently do 4.6.2 (and only on workflow) - branching logic on type of event.
+
+Scale back so as to not build unneed images
+
+Testing?
+Build Devel?
+Wiki/Docs?
+
+Keep a record of the manual edits. Where is the word doc on home PC?
+-----------
+
+Main readme file to explain
 * what was done
 * history and old repo
 * how to maintain with pull request and auto checks
@@ -40,12 +57,12 @@ make dir
 	dockerfiles
 
 
-	
 
 
-I had to 1) within organisation settings allow tokens 2) from my account (top right> settings> Developer Settings> TOkens) 
+
+I had to 1) within organisation settings allow tokens 2) from my account (top right> settings> Developer Settings> TOkens)
  create a token with the 3 permissions needed.
-3) copy the secret output to a secret within the repository 4)  add ` tokens: ${{ secrets.WORKFLOW}}` to 
+3) copy the secret output to a secret within the repository 4)  add ` tokens: ${{ secrets.WORKFLOW}}` to
 the yml file..  Not well documented at alll!!
 
 
