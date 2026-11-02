@@ -50,7 +50,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$`r-ver`$labels,
     default_labels
   )
-  bake_json_content$target$`r-ver`$tags <- c("docker.io/shug0131/r-ver", "ghcr.io/rocker-org/r-ver") |>
+  bake_json_content$target$`r-ver`$tags <- c("docker.io/shug0131/r-ver", "ghcr.io/cam-ctu/r-ver") |>
     generate_versioned_tags()
 
   ## rstudio
@@ -58,7 +58,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$rstudio$labels,
     default_labels
   )
-  bake_json_content$target$rstudio$tags <- c("docker.io/shug0131/rstudio", "ghcr.io/rocker-org/rstudio") |>
+  bake_json_content$target$rstudio$tags <- c("docker.io/shug0131/rstudio", "ghcr.io/cam-ctu/rstudio") |>
     generate_versioned_tags(rstudio = TRUE)
 
   ## tidyverse
@@ -66,7 +66,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$tidyverse$labels,
     default_labels
   )
-  bake_json_content$target$tidyverse$tags <- c("docker.io/shug0131/tidyverse", "ghcr.io/rocker-org/tidyverse") |>
+  bake_json_content$target$tidyverse$tags <- c("docker.io/shug0131/tidyverse", "ghcr.io/cam-ctu/tidyverse") |>
     generate_versioned_tags(rstudio = TRUE)
 
   ## verse
@@ -74,11 +74,11 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$verse$labels,
     default_labels
   )
-  bake_json_content$target$verse$tags <- c("docker.io/shug0131/verse", "ghcr.io/rocker-org/verse") |>
+  bake_json_content$target$verse$tags <- c("docker.io/shug0131/verse", "ghcr.io/cam-ctu/verse") |>
     generate_versioned_tags(rstudio = TRUE)
-  
+
   ## cctu
-  
+
   bake_json_content$target$cctu$labels <- c(
     bake_json_content$target$cctu$labels,
     default_labels
@@ -91,7 +91,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$geospatial$labels,
     default_labels
   )
-  bake_json_content$target$geospatial$tags <- c("docker.io/shug0131/geospatial", "ghcr.io/rocker-org/geospatial") |>
+  bake_json_content$target$geospatial$tags <- c("docker.io/shug0131/geospatial", "ghcr.io/cam-ctu/geospatial") |>
     generate_versioned_tags(rstudio = TRUE)
 
   ## shiny
@@ -99,7 +99,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$shiny$labels,
     default_labels
   )
-  bake_json_content$target$shiny$tags <- c("docker.io/shug0131/shiny", "ghcr.io/rocker-org/shiny") |>
+  bake_json_content$target$shiny$tags <- c("docker.io/shug0131/shiny", "ghcr.io/cam-ctu/shiny") |>
     generate_versioned_tags()
 
   ## shiny-verse
@@ -107,7 +107,7 @@ write_main_bakefile <- function(..., bakefile_template, path_template) {
     bake_json_content$target$`shiny-verse`$labels,
     default_labels
   )
-  bake_json_content$target$`shiny-verse`$tags <- c("docker.io/shug0131/shiny-verse", "ghcr.io/rocker-org/shiny-verse") |>
+  bake_json_content$target$`shiny-verse`$tags <- c("docker.io/shug0131/shiny-verse", "ghcr.io/cam-ctu/shiny-verse") |>
     generate_versioned_tags()
 
   # Update cache-from
