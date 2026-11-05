@@ -31,6 +31,14 @@ jobs:
       - name: copy files across
         run: |
           cp -rp rocker/.github/workflows/* ./.github/workflows_original
+          cp rocker/.github/workflows/bakefile-test.yml ./.github/workflows/bakefile-test.yml
+          cp rocker/.github/workflows/core-target.yml ./.github/workflows/core-target.yml
+          cp rocker/.github/workflows/dockerfiles.yml ./.github/workflows/dockerfiles.yml
+          cp rocker/.github/workflows/linting.yml ./.github/workflows/linting.yml
+          cp rocker/.github/workflows/r-build-test.yml ./.github/workflows/r-build-test.yml
+          cp rocker/.github/workflows/release.yml ./.github/workflows/release.yml
+          cp rocker/.github/workflows/scripts-test.yml ./.github/workflows/scripts-test.yml
+          
           cp -p rocker/Makefile  ./Makefile
           cp -rp rocker/scripts/*  ./scripts
           cp  rocker/build/README.md ./build

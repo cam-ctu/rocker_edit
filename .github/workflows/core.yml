@@ -74,140 +74,10 @@ jobs:
           RSTUDIO=$(jq -cn --argjson normal "${RSTUDIO}" --argjson recovered "${RECOVERED}" '$normal + $recovered | unique')
           echo "rstudio-versions=${RSTUDIO}" >>"${GITHUB_OUTPUT}"
           echo "smoke-versions=$(jq -cn --argjson normal "${VERSIONS}" --argjson rstudio "${RSTUDIO}" '$normal + $rstudio | unique')" >>"${GITHUB_OUTPUT}"
-
-  r-ver:
-    if: needs.prepare.outputs.versions != '[]'
-    needs: prepare
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: r-ver
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-  rstudio:
-    needs:
-      - prepare
-      - r-ver
-    if: >-
-      !cancelled() && needs.prepare.result == 'success' &&
-      (needs.r-ver.result == 'success' || needs.r-ver.result == 'skipped') &&
-      needs.prepare.outputs.rstudio-versions != '[]'
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.rstudio-versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: rstudio
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-  tidyverse:
-    needs:
-      - prepare
-      - rstudio
-    if: >-
-      !cancelled() && needs.rstudio.result == 'success' &&
-      needs.prepare.outputs.rstudio-versions != '[]'
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.rstudio-versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: tidyverse
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-  shiny:
-    needs:
-      - prepare
-      - r-ver
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: shiny
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-  shiny-verse:
-    needs:
-      - prepare
-      - shiny
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: shiny-verse
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-  verse:
-    needs:
-      - prepare
-      - tidyverse
-    if: >-
-      !cancelled() && needs.tidyverse.result == 'success' &&
-      needs.prepare.outputs.rstudio-versions != '[]'
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.rstudio-versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: verse
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
   cctu:
     needs:
       - prepare
-      - verse
     if: >-
       !cancelled() && needs.verse.result == 'success' &&
       needs.prepare.outputs.rstudio-versions != '[]'
@@ -227,80 +97,21 @@ jobs:
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-  geospatial:
-    needs:
-      - prepare
-      - verse
-    if: >-
-      !cancelled() && needs.verse.result == 'success' &&
-      needs.prepare.outputs.rstudio-versions != '[]'
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ${{ fromJSON(needs.prepare.outputs.rstudio-versions) }}
-    permissions:
-      contents: read
-      packages: write
-    uses: ./.github/workflows/core-target.yml
-    with:
-      version: ${{ matrix.version }}
-      target: geospatial
-      revision: ${{ needs.prepare.outputs.revision }}
-    secrets:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
+  
   smoke-test:
     if: always() && needs.prepare.result == 'success' && needs.prepare.outputs.smoke-versions != '[]'
     needs:
       - prepare
-      - r-ver
-      - rstudio
-      - tidyverse
-      - shiny
-      - shiny-verse
-      - verse
       - cctu
-      - geospatial
     name: Smoke ${{ matrix.image.target }} ${{ matrix.image.platform }} R ${{ matrix.version }}
     strategy:
       fail-fast: false
       matrix:
         version: ${{ fromJSON(needs.prepare.outputs.smoke-versions) }}
         image:
-          - target: r-ver
+          - target: cctu
             platform: linux/amd64
             runner: ubuntu-24.04
-          - target: r-ver
-            platform: linux/arm64
-            runner: ubuntu-24.04-arm
-          - target: rstudio
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: rstudio
-            platform: linux/arm64
-            runner: ubuntu-24.04-arm
-          - target: tidyverse
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: tidyverse
-            platform: linux/arm64
-            runner: ubuntu-24.04-arm
-          - target: shiny
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: shiny-verse
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: verse
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: geospatial
-            platform: linux/amd64
-            runner: ubuntu-24.04
-          - target: geospatial
-            platform: linux/arm64
-            runner: ubuntu-24.04-arm
     runs-on: ${{ matrix.image.runner }}
     steps:
       - uses: actions/checkout@v7

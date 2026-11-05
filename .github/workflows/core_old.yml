@@ -1,18 +1,6 @@
 name: Build & Push Core images Older Version
 
 on:
-  push:
-    branches:
-      - "master"
-    paths:
-      - "dockerfiles/*_devel.Dockerfile"
-  workflow_run:
-    workflows:
-      - "Create new release"
-    branches:
-      - "master"
-    types:
-      - completed
   workflow_dispatch:
 
 concurrency:

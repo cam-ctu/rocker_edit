@@ -1,0 +1,19 @@
+original	edited
+scripts/install_R_source.sh  	scripts/install_R_source_edit.sh
+scripts/install_texlive.sh	scripts/install_texlive_edit.sh 
+scripts/install_verse.sh	scripts/install_verse_edit.sh
+build/reports/versions-master.Rmd	build/reports/versions.Rmd
+build/scripts/generate-args-master.R	build/scripts/generate-args.R
+build/scripts/generate-bakefiles-master.R	build/scripts/generate-bakefiles.R
+build/scripts/generate-dockerfiles-master.R	build/scripts/generate-dockerfiles.R
+build/scripts/generate-matrix-master.R	build/scripts/generate-matrix.R
+build/scripts/generate-variables-master.R	build/scripts/generate-variables.R
+build/templates/bakefiles/main.docker-bake-master.json	build/templates/bakefiles/main.docker-bake.json
+.github/workflows_original/devel.yml	
+.github/workflows_original/experimental.yml	
+.github/workflows_original/extra.yml	
+.github/workflows_original/reports.yml	.github/workflows/reports.yml
+.github/workflows_original/test-experimental.yml	
+.github/workflows_original/core.yml	.github/workflows/core.yml
+	.github/workflows/latest-two.yml
+	.github/workflows/core-old.yml
