@@ -31,8 +31,6 @@ concurrency:
 jobs:
   publish_reports:
     if: always()
-    needs:
-      - inspect-main
     runs-on: ubuntu-latest
     container:
       image: rocker/tidyverse:latest
