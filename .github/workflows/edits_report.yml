@@ -52,7 +52,7 @@ jobs:
           merge-multiple: true
       - name: Generate reports and update wiki home
         run: |
-          make --always-make report/edits
+          make --always-make build/report/edits
       - name: Upload artifacts
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v7

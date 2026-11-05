@@ -17,3 +17,4 @@ build/templates/bakefiles/main.docker-bake-master.json	build/templates/bakefiles
 .github/workflows_original/core.yml	.github/workflows/core.yml	restricting to cctu
 	.github/workflows/latest_two.yml	historic action only run manually- use core.yml instead
 	.github/workflows/core_old.yml	historic action only run manually.
+	makefile	adding lines to create this file
