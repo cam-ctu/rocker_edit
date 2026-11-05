@@ -1,0 +1,48 @@
+---
+title: "Details of Edits"
+date: "`r format(Sys.time(), '%Y-%m-%d %H:%M:%S %Z')`"
+output:
+  github_document:
+    toc: false
+    df_print: kable
+    html_preview: false
+    md_extensions: -smart
+---
+
+
+
+# Introduction
+
+This document gives more details of the changes from the original Rocker. 
+
+See the action `repo_update.yml` for an explicit listing of what is copied and maybe gets modified. If any of the original files get changed in the original rocker-version2 repo, then you can use these details here to see if you may need to manually implement changes on the edited versions.   
+
+Apart from github action files, we keep a copy of the original in the same folder as the revised one, using "-master" or "_edit" to indicate. For actions files, this would still run the originals, which we don't want, hence we use a separate folder to keep the originals (`.github/workflow_orignals`), and then copy across back into (`.github/workflow`)
+
+The table gives some comments on why the edits had to happen. 
+
+
+
+```{r listing, echo=FALSE}
+df <- read.delim("build/reports/edits.tsv")
+df |> kableExtra::kable()
+```
+
+# Comparison
+
+We show the detailed line by line comparison below
+
+```{r comparison, results='asis', echo=FALSE, message=FALSE}
+library(tidyverse)
+ df|> 
+  filter(original!="" & edited!="") |> 
+  select(-comments) |> 
+  pmap(\(original, edited){diffobj::diffFile(original, edited, format="html",
+                                             style = list(html.output = "diff.w.style"), 
+                                             mode="unified",
+                                             tar.banner=original,
+                                             cur.banner=edited
+                                             ) |> 
+      as.character()
+    }) |> unlist() |> cat()
+```

@@ -1,19 +1,19 @@
-original	edited
-scripts/install_R_source.sh  	scripts/install_R_source_edit.sh
-scripts/install_texlive.sh	scripts/install_texlive_edit.sh 
-scripts/install_verse.sh	scripts/install_verse_edit.sh
-build/reports/versions-master.Rmd	build/reports/versions.Rmd
-build/scripts/generate-args-master.R	build/scripts/generate-args.R
-build/scripts/generate-bakefiles-master.R	build/scripts/generate-bakefiles.R
-build/scripts/generate-dockerfiles-master.R	build/scripts/generate-dockerfiles.R
-build/scripts/generate-matrix-master.R	build/scripts/generate-matrix.R
-build/scripts/generate-variables-master.R	build/scripts/generate-variables.R
-build/templates/bakefiles/main.docker-bake-master.json	build/templates/bakefiles/main.docker-bake.json
-.github/workflows_original/devel.yml	
-.github/workflows_original/experimental.yml	
-.github/workflows_original/extra.yml	
-.github/workflows_original/reports.yml	.github/workflows/reports.yml
-.github/workflows_original/test-experimental.yml	
-.github/workflows_original/core.yml	.github/workflows/core.yml
-	.github/workflows/latest-two.yml
-	.github/workflows/core-old.yml
+original	edited	comments
+scripts/install_R_source.sh	scripts/install_R_source_edit.sh	adding in test files to allow UAT downstream
+scripts/install_texlive.sh	scripts/install_texlive_edit.sh	adding extra text packages to make the UAT work
+scripts/install_verse.sh	scripts/install_verse_edit.sh	removing one line 73 as it causes errors for R4.6.2
+build/reports/versions-master.Rmd	build/reports/versions.Rmd	adding text on cctu package versions
+build/scripts/generate-args-master.R	build/scripts/generate-args.R	adding cctu
+build/scripts/generate-bakefiles-master.R	build/scripts/generate-bakefiles.R	changing the user account for docker and gh image hub
+build/scripts/generate-dockerfiles-master.R	build/scripts/generate-dockerfiles.R	adding cctu
+build/scripts/generate-matrix-master.R	build/scripts/generate-matrix.R	creating last two versions of R, as we use the last-but-one as default
+build/scripts/generate-variables-master.R	build/scripts/generate-variables.R	adding cctu
+build/templates/bakefiles/main.docker-bake-master.json	build/templates/bakefiles/main.docker-bake.json	restricting to cctu and changing user account
+.github/workflows_original/devel.yml		dropped but may consider rejunvenating to build cctu on cutting edge versions of everything else
+.github/workflows_original/experimental.yml		dropped  no need for these images
+.github/workflows_original/extra.yml		dropped  no need for these images
+.github/workflows_original/reports.yml	.github/workflows/reports.yml	removing report items about expiremental images
+.github/workflows_original/test-experimental.yml		dropped  no need for these images
+.github/workflows_original/core.yml	.github/workflows/core.yml	restricting to cctu
+	.github/workflows/latest_two.yml	historic action only run manually- use core.yml instead
+	.github/workflows/core_old.yml	historic action only run manually.

@@ -22,6 +22,8 @@ There was a previous [version](https://github.com/shug0131/rocker-versioned2) of
 
 For any changes, or new R versions,  then a pull request should be automatically generated. Use the github interface to  inspect the changed files to see if revisions are needed, or simply accept the pull request.
 
+Look at [edited files](https://github.com/cam-ctu/rocker_edit/wiki/edits) for a forensic look at the original and revised files.
+
 # Todo list
 
 * There are extra testing and linting checks that don't pass completely. Some of these may be for steps from the original repo that are not used at all here. 
