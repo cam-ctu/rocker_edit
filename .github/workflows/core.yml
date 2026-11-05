@@ -48,7 +48,7 @@ jobs:
       - name: Select version matrix
         id: matrix
         run: |
-          JSON=build/matrix/latest.json
+          JSON=build/matrix/latest-two.json
           if [[ "${{ github.event_name }}" == "workflow_run" ]]; then
             JSON=build/matrix/all.json
           fi
