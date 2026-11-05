@@ -94,6 +94,8 @@ $(REPORT_DIR)/_Sidebar.md: build/reports/_Sidebar.md
 	cp $< $@
 $(REPORT_DIR)/Versions.md: build/reports/versions.Rmd build/args/history.tsv
 	-Rscript -e 'rmarkdown::render(input = "$<", output_dir = "$(@D)", output_file = "$(@F)")'
+$(REPORT_DIR)/Edits.md: build/reports/edits.Rmd build/reports/edits.tsv
+	-Rscript -e 'rmarkdown::render(input = "$<", output_dir = "$(@D)", output_file = "$(@F)")'
 
 clean:
 	rm -r -f tmp/*
