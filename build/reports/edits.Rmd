@@ -58,7 +58,7 @@ df|>
   walk(\(x){
     cat("```diff\n")
     cat(x,sep="\n")
-    cat("\n```")
+    cat("\n```\n\n")
   })
   
   
