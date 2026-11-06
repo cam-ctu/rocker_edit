@@ -17,5 +17,5 @@ build/templates/bakefiles/main.docker-bake-master.json	build/templates/bakefiles
 .github/workflows_original/core.yml	.github/workflows/core.yml	restricting to cctu
 	.github/workflows/latest_two.yml	historic action only run manually- use core.yml instead
 	.github/workflows/core_old.yml	historic action only run manually.
-makefile-master	makefile	adding lines to create this file
+Makefile-master	Makefile	adding lines to create this file
 build/reports/_Sidebar-master.md	build/reports/_Sidebar.md	giving an extra reference to this file
