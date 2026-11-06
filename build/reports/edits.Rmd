@@ -56,6 +56,10 @@ df|>
                                              ) |> 
       as.character() |> 
       strsplit("\n") |> 
+      gsub("&nbsp;", " ", x=_) |>    # Convert HTML spaces back to regular spaces
+      gsub("&lt;", "<",x=_) |>      # Convert HTML less-than back to <
+      gsub("&gt;", ">", x=_)   |>   # Convert HTML greater-than back to >
+      gsub("&amp;", "&", x=_)  |> 
       unlist()
     }) |> unlist() |> cat( sep = "\n")
  cat("\n```")
