@@ -39,11 +39,11 @@ jobs:
           cp rocker/.github/workflows/release.yml ./.github/workflows/release.yml
           cp rocker/.github/workflows/scripts-test.yml ./.github/workflows/scripts-test.yml
           
-          cp -p rocker/Makefile  ./Makefile
+          cp -p rocker/Makefile  ./Makefile-master
           cp -rp rocker/scripts/*  ./scripts
           cp  rocker/build/README.md ./build
           cp  rocker/build/knit-report.R ./build
-          cp rocker/build/reports/_Sidebar.md ./build/reports
+          cp rocker/build/reports/_Sidebar.md ./build/reports/_Sidebar-master.md
           cp rocker/build/reports/template.Rmd ./build/reports
           cp rocker/build/reports/versions.Rmd ./build/reports/versions-master.Rmd
           cp rocker/build/reports/wiki_home.Rmd ./build/reports
