@@ -31,7 +31,7 @@ The table gives some comments on why the edits had to happen.
 
 ```{r listing, echo=FALSE}
 df <- read.delim("build/reports/edits.tsv")
-df |> kableExtra::kable()
+df 
 ```
 
 # Comparison
