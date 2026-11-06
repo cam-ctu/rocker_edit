@@ -48,19 +48,29 @@ cat("```diff\n")
 df|> 
   filter(original!="" & edited!="") |> 
   select(-comments) |> 
-  pmap(\(original, edited){diffobj::diffFile(original, edited, format="raw",
-                                            # style = list(html.output = "diff.w.style"), 
-                                             mode="unified",
-                                             tar.banner=original,
-                                             cur.banner=edited
-                                             ) |> 
-      as.character() |> 
-      strsplit("\n") |> 
-      gsub("&nbsp;", " ", x=_) |>    # Convert HTML spaces back to regular spaces
-      gsub("&lt;", "<",x=_) |>      # Convert HTML less-than back to <
-      gsub("&gt;", ">", x=_)   |>   # Convert HTML greater-than back to >
-      gsub("&amp;", "&", x=_)  |> 
-      unlist()
-    }) |> unlist() |> cat( sep = "\n")
+    pmap(\(original, edited){
+      system2("git", 
+              args = c("diff", "--no-index", original, edited), 
+              stdout = TRUE, 
+              stderr = TRUE
+      )}
+    ) |> 
+  unlist() |> 
+  cat(sep="\n")
+
+    # diffobj::diffFile(original, edited, format="raw",
+    #                                         # style = list(html.output = "diff.w.style"), 
+    #                                          mode="unified",
+    #                                          tar.banner=original,
+    #                                          cur.banner=edited
+    #                                          ) |> 
+    #   as.character() |> 
+    #   strsplit("\n") |> 
+    #   gsub("&nbsp;", " ", x=_) |>    # Convert HTML spaces back to regular spaces
+    #   gsub("&lt;", "<",x=_) |>      # Convert HTML less-than back to <
+    #   gsub("&gt;", ">", x=_)   |>   # Convert HTML greater-than back to >
+    #   gsub("&amp;", "&", x=_)  |> 
+    #   unlist()
+    # }) |> unlist() |> cat( sep = "\n")
  cat("\n```")
 ```
