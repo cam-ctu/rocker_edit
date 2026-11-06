@@ -54,7 +54,9 @@ df|>
                                              tar.banner=original,
                                              cur.banner=edited
                                              ) |> 
-      as.character()
-    }) |> unlist() |> cat()
+      as.character() |> 
+      strsplit("\n")
+      unlist()
+    }) |> unlist() |> cat( sep = "\n")
  cat("\n```")
 ```
