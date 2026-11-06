@@ -50,9 +50,9 @@ jobs:
           path: tmp
           pattern: tmp-*
           merge-multiple: true
-      - name: Generate reports and update wiki home
+      - name: Generate Edits wiki page
         run: |
-          make --always-make build/report/edits
+          make --always-make report/Edits.md
       - name: Upload artifacts
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v7
