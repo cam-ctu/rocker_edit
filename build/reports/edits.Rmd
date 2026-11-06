@@ -43,7 +43,7 @@ library(tidyverse)
 library(diffobj)
 
 
-cat("```diff\n")
+
 
 df|> 
   filter(original!="" & edited!="") |> 
@@ -55,8 +55,13 @@ df|>
               stderr = TRUE
       )}
     ) |> 
-  unlist() |> 
-  cat(sep="\n")
+  walk(\(x){
+    cat("```diff\n")
+    cat(x,sep="\n")
+    cat("\n```")
+  })
+  
+  
 
     # diffobj::diffFile(original, edited, format="raw",
     #                                         # style = list(html.output = "diff.w.style"), 
@@ -72,5 +77,5 @@ df|>
     #   gsub("&amp;", "&", x=_)  |> 
     #   unlist()
     # }) |> unlist() |> cat( sep = "\n")
- cat("\n```")
+
 ```
