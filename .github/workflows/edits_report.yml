@@ -52,7 +52,7 @@ jobs:
           merge-multiple: true
       - name: Generate Edits wiki page
         run: |
-          make --always-make report/Edits.md
+          make --always-make edits-page
       - name: Upload artifacts
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v7

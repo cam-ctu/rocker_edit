@@ -96,6 +96,8 @@ $(REPORT_DIR)/Versions.md: build/reports/versions.Rmd build/args/history.tsv
 	-Rscript -e 'rmarkdown::render(input = "$<", output_dir = "$(@D)", output_file = "$(@F)")'
 $(REPORT_DIR)/Edits.md: build/reports/edits.Rmd build/reports/edits.tsv
 	-Rscript -e 'rmarkdown::render(input = "$<", output_dir = "$(@D)", output_file = "$(@F)")'
+edits-page: build/reports/edits.Rmd build/reports/edits.tsv
+	-Rscript -e 'rmarkdown::render(input = "build/reports/edits.Rmd", output_dir = "$(REPORT_DIR)", output_file = "Edits.md")'
 
 clean:
 	rm -r -f tmp/*

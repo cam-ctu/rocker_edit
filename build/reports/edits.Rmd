@@ -40,6 +40,14 @@ We show the detailed line by line comparison below
 
 ```{r comparison, results='asis', echo=FALSE, message=FALSE}
 library(tidyverse)
+library(diffobj)
+
+# 1. Output the required CSS for the diff styles
+cat("<style>")
+cat(diffobj_css())
+cat("</style>\n\n")
+
+
  df|> 
   filter(original!="" & edited!="") |> 
   select(-comments) |> 
