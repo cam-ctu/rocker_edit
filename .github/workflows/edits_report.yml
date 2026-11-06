@@ -5,16 +5,16 @@ on:
     branches:
       - "master"
     paths:
-      - "build/*"
-      - "scripts/*"
-      - ".github/workflows_original/*"
+      - "build/**"
+      - "scripts/**"
+      - ".github/workflows_original/**"
   pull_request:
     branches:
       - "master"
     paths:
-      - "build/*"
-      - "scripts/*"
-      - ".github/workflows_original/*"
+      - "build/**"
+      - "scripts/**"
+      - ".github/workflows_original/**"
   workflow_run:
     workflows:
       - "Update Repo from Rocker_Versions2"
