@@ -41,22 +41,18 @@ We show the detailed line by line comparison below
 ```{r comparison, results='asis', echo=FALSE, message=FALSE}
 library(tidyverse)
 library(diffobj)
+cat("```diff\n")
 
-# 1. Output the required CSS for the diff styles
-cat("<style>")
-cat(diffobj_css())
-cat("</style>\n\n")
-
-
- df|> 
+df|> 
   filter(original!="" & edited!="") |> 
   select(-comments) |> 
-  pmap(\(original, edited){diffobj::diffFile(original, edited, format="html",
-                                             style = list(html.output = "diff.w.style"), 
+  pmap(\(original, edited){diffobj::diffFile(original, edited, format="text",
+                                            # style = list(html.output = "diff.w.style"), 
                                              mode="unified",
                                              tar.banner=original,
                                              cur.banner=edited
                                              ) |> 
       as.character()
     }) |> unlist() |> cat()
+ cat("\n```")
 ```
