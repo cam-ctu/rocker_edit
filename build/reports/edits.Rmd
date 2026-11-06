@@ -55,7 +55,7 @@ df|>
                                              cur.banner=edited
                                              ) |> 
       as.character() |> 
-      strsplit("\n")
+      strsplit("\n") |> 
       unlist()
     }) |> unlist() |> cat( sep = "\n")
  cat("\n```")
