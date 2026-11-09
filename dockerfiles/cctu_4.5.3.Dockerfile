@@ -11,7 +11,7 @@ RUN /rocker_scripts/install_R_source.sh
 
 ENV CRAN="https://p3m.dev/cran/__linux__/noble/2026-04-23"
 ENV LANG=en_US.UTF-8
-
+ENV RENV_CONFIG_REPOS_OVERRIDE = "https://p3m.dev/cran/__linux__/noble/2026-04-23"
 
 COPY scripts/bin/ /rocker_scripts/bin/
 
@@ -50,7 +50,7 @@ RUN /rocker_scripts/install_quarto.sh
 ENV CTAN_REPO="https://www.texlive.info/tlnet-archive/2026/04/23/tlnet"
 ENV PATH="$PATH:/usr/local/texlive/bin/linux"
 
-COPY scripts/install_verse_edit.sh /rocker_scripts/install_verse.sh
+COPY scripts/install_verse.sh /rocker_scripts/install_verse.sh
 COPY scripts/install_texlive_edit.sh /rocker_scripts/install_texlive.sh
 RUN /rocker_scripts/install_verse.sh
 
