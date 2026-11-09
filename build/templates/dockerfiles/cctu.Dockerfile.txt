@@ -11,7 +11,7 @@ RUN /rocker_scripts/install_R_source.sh
 
 ENV CRAN="{{cran}}"
 ENV LANG=en_US.UTF-8
-
+ENV RENV_CONFIG_REPOS_OVERRIDE = "{{cran}}"
 
 COPY scripts/bin/ /rocker_scripts/bin/
 
