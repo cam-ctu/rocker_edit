@@ -74,7 +74,7 @@ jobs:
           RSTUDIO=$(jq -cn --argjson normal "${RSTUDIO}" --argjson recovered "${RECOVERED}" '$normal + $recovered | unique')
           echo "rstudio-versions=${RSTUDIO}" >>"${GITHUB_OUTPUT}"
           echo "smoke-versions=$(jq -cn --argjson normal "${VERSIONS}" --argjson rstudio "${RSTUDIO}" '$normal + $rstudio | unique')" >>"${GITHUB_OUTPUT}"
-      
+
   cctu:
     needs:
       - prepare
@@ -96,7 +96,7 @@ jobs:
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-  
+
   smoke-test:
     if: always() && needs.prepare.result == 'success' && needs.prepare.outputs.smoke-versions != '[]'
     needs:
@@ -128,7 +128,7 @@ jobs:
           fi
       - name: Login to Docker Hub
         if: steps.available.outputs.available == 'true'
-        uses: docker/login-action@v4.7.0
+        uses: docker/login-action@v4.8.0
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}

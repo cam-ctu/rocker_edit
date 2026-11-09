@@ -1,7 +1,6 @@
 original	edited	comments
 scripts/install_R_source.sh	scripts/install_R_source_edit.sh	adding in test files to allow UAT downstream
 scripts/install_texlive.sh	scripts/install_texlive_edit.sh	adding extra text packages to make the UAT work
-scripts/install_verse.sh	scripts/install_verse_edit.sh	removing one line 73 as it causes errors for R4.6.2
 build/reports/versions-master.Rmd	build/reports/versions.Rmd	adding text on cctu package versions
 build/scripts/generate-args-master.R	build/scripts/generate-args.R	adding cctu
 build/scripts/generate-bakefiles-master.R	build/scripts/generate-bakefiles.R	changing the user account for docker and gh image hub
