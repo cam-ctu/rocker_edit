@@ -27,4 +27,4 @@ r_version	r_release_date	r_freeze_date	ubuntu_series	ubuntu_version	cran	rstudio
 4.5.3	2026-03-11	2026-04-23	noble	24.04	https://p3m.dev/cran/__linux__/noble/2026-04-23	2026.04.0+526	https://www.texlive.info/tlnet-archive/2026/04/23/tlnet	FALSE	TRUE	0.8.11
 4.6.0	2026-04-24	2026-06-23	noble	24.04	https://p3m.dev/cran/__linux__/noble/2026-06-23	2026.06.0+242	https://www.texlive.info/tlnet-archive/2026/06/23/tlnet	FALSE	FALSE	0.8.13
 4.6.1	2026-06-24	2026-10-28	noble	24.04	https://p3m.dev/cran/__linux__/noble/2026-10-28	2026.10.1+239	https://www.texlive.info/tlnet-archive/2026/10/28/tlnet	FALSE	FALSE	0.8.15
-4.6.2	2026-10-29		resolute	26.04	https://p3m.dev/cran/__linux__/resolute/latest	2026.10.1+239	https://mirror.ctan.org/systems/texlive/tlnet	TRUE	TRUE	0.8.16
+4.6.2	2026-10-29		resolute	26.04	https://p3m.dev/cran/__linux__/resolute/latest	2026.11.0+203	https://mirror.ctan.org/systems/texlive/tlnet	TRUE	TRUE	0.8.16
